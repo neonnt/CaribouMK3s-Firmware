@@ -670,7 +670,7 @@ do
 	sed -i -- "s/#define FW_DEV_VERSION FW_VERSION_UNKNOWN/#define FW_DEV_VERSION FW_VERSION_$DEV_STATUS/g" $SCRIPT_PATH/Firmware/Configuration.h
 
 	# set FW_REPOSITORY
-	sed -i -- 's/#define FW_REPOSITORY "Unknown"/#define FW_REPOSITORY "Prusa3d"/g' $SCRIPT_PATH/Firmware/Configuration.h
+	sed -i -- 's/#define FW_REPOSITORY "Unknown"/#define FW_REPOSITORY "Caribou3d"/g' $SCRIPT_PATH/Firmware/Configuration.h
 
 	# set FW_COMMIT_HASH
 	#echo $GIT_COMMIT_HASH
@@ -807,7 +807,7 @@ do
 		rm $SCRIPT_PATH/lang/not_used.txt
 	fi
 	sed -i -- "s/^#define FW_DEV_VERSION FW_VERSION_$DEV_STATUS/#define FW_DEV_VERSION FW_VERSION_UNKNOWN/g" $SCRIPT_PATH/Firmware/Configuration.h
-	sed -i -- 's/^#define FW_REPOSITORY "Prusa3d"/#define FW_REPOSITORY "Unknown"/g' $SCRIPT_PATH/Firmware/Configuration.h
+	sed -i -- 's/^#define FW_REPOSITORY "Caribou3d"/#define FW_REPOSITORY "Unknown"/g' $SCRIPT_PATH/Firmware/Configuration.h
 	sed -i -- "s/.*#define FW_COMMIT_HASH.*/#define FW_COMMIT_HASH \"\"/g" $SCRIPT_PATH/Firmware/Configuration.h
 	echo $MULTI_LANGUAGE_CHECK
 	#sed -i -- "s/^#define LANG_MODE * /#define LANG_MODE              $MULTI_LANGUAGE_CHECK/g" $SCRIPT_PATH/Firmware/config.h
@@ -819,7 +819,13 @@ do
 done
 # Sort hexfiles only when build ALL is selected
 if [ ! -z "$ALL_VARIANTS" ]; then
-	$SCRIPT_PATH/sort.sh ../$OUTPUT_FOLDER/../ ../$OUTPUT_FOLDER/../../FW$FW-Build$BUILD-sorted/
+	if [ "$ALL_VARIANTS" == "All" ]; then
+		$SCRIPT_PATH/sort.sh ../$OUTPUT_FOLDER/../ ../$OUTPUT_FOLDER/../../FW$FW-Build$BUILD-sorted/
+	else
+		echo "$(tput setaf 1)ALL_VARIANTS argument is wrong!$(tput sgr0)"
+		echo "Only $(tput setaf 2)'All'$(tput sgr0) is allowed as argument!$(tput sgr0)"
+		exit 37
+	fi
 fi
 # Switch to hex path and list build files
 cd $SCRIPT_PATH
