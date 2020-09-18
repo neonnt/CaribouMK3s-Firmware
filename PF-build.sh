@@ -245,14 +245,14 @@ else
 	ARDUINO_ENV="1.8.5"
 fi
 BUILD_ENV="1.0.6"
-BOARD="prusa_einsy_rambo"
-BOARD_PACKAGE_NAME="PrusaResearch"
-BOARD_VERSION="1.0.3"
+BOARD="caribou3d_einsy_rambo"
+BOARD_PACKAGE_NAME="Caribou3dResearch"
+BOARD_VERSION="1.0.0"
 #BOARD_URL="https://raw.githubusercontent.com/3d-gussner/Arduino_Boards/Prusa_Merge_v1.0.3/IDE_Board_Manager/package_prusa3d_index.json"
-BOARD_URL="https://raw.githubusercontent.com/prusa3d/Arduino_Boards/master/IDE_Board_Manager/package_prusa3d_index.json"
-BOARD_FILENAME="prusa3dboards"
+BOARD_URL="https://raw.githubusercontent.com/caribou3d/Arduino_Boards/master/IDE_Board_Manager/package_caribou3d_index.json"
+BOARD_FILENAME="caribou3dboards"
 #BOARD_FILE_URL="https://raw.githubusercontent.com/3d-gussner/Arduino_Boards/Prusa_Merge_v1.0.3/IDE_Board_Manager/prusa3dboards-1.0.3.tar.bz2"
-BOARD_FILE_URL="https://raw.githubusercontent.com/prusa3d/Arduino_Boards/master/IDE_Board_Manager/prusa3dboards-1.0.3.tar.bz2"
+BOARD_FILE_URL="https://raw.githubusercontent.com/caribou3d/Arduino_Boards/master/IDE_Board_Manager/caribou3dboards-1.0.0.tar.bz2"
 #PF_BUILD_FILE_URL="https://github.com/3d-gussner/PF-build-env-1/releases/download/$BUILD_ENV-WinLin/PF-build-env-WinLin-$BUILD_ENV.zip"
 PF_BUILD_FILE_URL="https://github.com/prusa3d/PF-build-env/releases/download/$BUILD_ENV-WinLin/PF-build-env-WinLin-$BUILD_ENV.zip"
 LIB="PrusaLibrary"
@@ -712,7 +712,7 @@ do
 	echo "Using variant $VARIANT$(tput setaf 3)"
 	#sleep 2
 	#clean Prusa-Firmware-build folder
-	rm -r $SCRIPT_PATH/../Prusa-Firmware-build/*
+	rm -r $BUILD_PATH/*
 	#$BUILD_ENV_PATH/arduino-builder -dump-prefs -debug-level 10 -compile -hardware $ARDUINO/hardware -hardware $ARDUINO/portable/packages -tools $ARDUINO/tools-builder -tools $ARDUINO/hardware/tools/avr -tools $ARDUINO/portable/packages -built-in-libraries $ARDUINO/libraries -libraries $ARDUINO/portable/sketchbook/libraries -fqbn=$BOARD_PACKAGE_NAME:avr:$BOARD -build-path=$BUILD_PATH -warnings=all $SCRIPT_PATH/Firmware/Firmware.ino || exit 14
 	$BUILD_ENV_PATH/arduino-builder -compile -hardware $ARDUINO/hardware -hardware $ARDUINO/portable/packages -tools $ARDUINO/tools-builder -tools $ARDUINO/hardware/tools/avr -tools $ARDUINO/portable/packages -built-in-libraries $ARDUINO/libraries -libraries $ARDUINO/portable/sketchbook/libraries -fqbn=$BOARD_PACKAGE_NAME:avr:$BOARD -build-path=$BUILD_PATH -warnings=all $SCRIPT_PATH/Firmware/Firmware.ino || exit 14
 	echo "$(tput sgr 0)"
