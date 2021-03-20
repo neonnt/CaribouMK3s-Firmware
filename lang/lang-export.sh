@@ -27,7 +27,6 @@ if [ "$LNG" = "all" ]; then
  ./lang-export.sh de
  ./lang-export.sh es
  ./lang-export.sh fr
- ./lang-export.sh nl
  ./lang-export.sh it
  ./lang-export.sh pl
 #Community language support
@@ -60,7 +59,6 @@ else
    *de*) echo "German" ;;
    *es*) echo "Spanish" ;;
    *fr*) echo "French" ;;
-   *nl*) echo "Dutch" ;;
    *it*) echo "Italian" ;;
    *pl*) echo "Polish" ;;
 #Community language support
