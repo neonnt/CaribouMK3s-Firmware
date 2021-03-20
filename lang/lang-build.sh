@@ -58,6 +58,12 @@ lang_code_hex_data()
   *it*) echo '\x74\x69' ;;
   *nl*) echo '\x6c\x6e' ;;
   *pl*) echo '\x6c\x70' ;;
+#Community language support
+#Dutch
+  *nl*) echo '\x6c\x6e' ;;
+#Use the 2 lines below as a template and replace 'qr' and `\x71\x72`
+##New language
+#  *qr*) echo '\x71\x72' ;;
  esac
  echo '??'
 }
@@ -180,6 +186,7 @@ if [ "$1" = "all" ]; then
  generate_binary 'nl'
  generate_binary 'it'
  generate_binary 'pl'
+ #DO NOT add Community languages here !!!
 else
  generate_binary $1
 fi

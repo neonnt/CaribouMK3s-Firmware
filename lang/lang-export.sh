@@ -30,6 +30,12 @@ if [ "$LNG" = "all" ]; then
  ./lang-export.sh nl
  ./lang-export.sh it
  ./lang-export.sh pl
+#Community language support
+#Dutch
+ ./lang-export.sh nl
+#Use the 2 lines below as a template and replace 'qr' and 'New language'
+##New language
+# ./lang-export.sh qr
  exit 0
 fi
 
@@ -57,6 +63,12 @@ else
    *nl*) echo "Dutch" ;;
    *it*) echo "Italian" ;;
    *pl*) echo "Polish" ;;
+#Community language support
+#Dutch
+   *nl*) echo "Dutch" ;;
+#Use the 2 lines below as a template and replace 'qr' and 'New language'
+##New language
+#   *qr*) echo "New language" ;;
   esac)
  # unknown language - error
  if [ -z "LNGNAME" ]; then
