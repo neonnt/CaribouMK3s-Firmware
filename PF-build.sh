@@ -153,6 +153,8 @@
 #                          Add '-?' '-h' help option
 # 27 Jan 2021, 3d-gussner, Add `-c`, `-p` and `-n` options
 # 27 Feb 2021, 3d-gussner, Add './lang-community.sh' and update exits
+# 20 Mar 2021, wschadow,   fixed paths arguments when sort.sh is called
+#
 
 #### Start check if OSTYPE is supported
 OS_FOUND=$( command -v uname)
@@ -760,6 +762,7 @@ do
 		mkdir -p $SCRIPT_PATH/../PF-build-hex/FW$FW-Build$BUILD/$MOTHERBOARD || exit 28
 	fi
 	OUTPUT_FOLDER="PF-build-hex/FW$FW-Build$BUILD/$MOTHERBOARD"
+	OUTPUT_PATH=PF-build-hex/FW$FW-Build$BUILD
 	
 	#Check if exactly the same hexfile already exists
 	if [[ -f "$SCRIPT_PATH/../$OUTPUT_FOLDER/FW$FW-Build$BUILD-$VARIANT.hex"  &&  "$LANGUAGES" == "ALL" ]]; then
@@ -997,7 +1000,7 @@ done
 # Sort hexfiles only when build ALL is selected
 if [ ! -z "$ALL_VARIANTS" ]; then
 	if [ "$ALL_VARIANTS" == "All" ]; then
-		$SCRIPT_PATH/sort.sh ../$OUTPUT_FOLDER/../ ../$OUTPUT_FOLDER/../../FW$FW-Build$BUILD-sorted/
+		$SCRIPT_PATH/sort.sh ../$OUTPUT_PATH ../$OUTPUT_PATH-sorted/
 	else
 		echo "$(tput setaf 1)ALL_VARIANTS argument is wrong!$(tput sgr0)"
 		echo "Only $(tput setaf 2)'All'$(tput sgr0) is allowed as argument!$(tput sgr0)"
