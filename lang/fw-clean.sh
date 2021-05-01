@@ -63,6 +63,7 @@ rm_if_exists update_lang_nl.out
 #Use the 2 lines below as a template and replace 'qr'
 ##New language
 #rm_if_exists firmware_qr.hex
+#rm_if_exists update_lang_qr.out
 
 echo -n "fw-clean.sh finished" >&2
 if [ $result -eq 0 ]; then
