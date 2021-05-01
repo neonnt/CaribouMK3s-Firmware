@@ -1093,9 +1093,9 @@ void setup()
 		SERIAL_PROTOCOLLNPGM("start");
 #endif
 	SERIAL_ECHO_START;
-	printf_P(PSTR(" " FW_VERSION_FULL "\n"));
+	puts_P(PSTR(" " FW_VERSION_FULL));
 	//Print Git commit hash
-	printf_P(PSTR("Commit Hash: " FW_COMMIT_HASH "\n"));
+	puts_P(PSTR("Commit Hash: " FW_COMMIT_HASH));
 
 	//SERIAL_ECHOPAIR("Active sheet before:", static_cast<unsigned long int>(eeprom_read_byte(&(EEPROM_Sheets_base->active_sheet))));
 
