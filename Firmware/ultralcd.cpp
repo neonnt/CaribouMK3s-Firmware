@@ -3294,6 +3294,8 @@ calibrated:
 	else {
 		current_position[Z_AXIS] = Z_MAX_POS+4.f;
 	}
+#elif BONDTECH_LGX
+    current_position[Z_AXIS] = Z_MAX_POS+2.f;
 #else
 	if ((PRINTER_TYPE == PRINTER_MK25S) || (PRINTER_TYPE == PRINTER_MK25) || (PRINTER_TYPE == PRINTER_MK2) || (PRINTER_TYPE == PRINTER_MK2_SNMM)) {
 		current_position[Z_AXIS] = Z_MAX_POS-3.f;
@@ -6225,17 +6227,23 @@ void unload_filament(bool automatic)
     raise_z_above(automatic? MIN_Z_FOR_SWAP: MIN_Z_FOR_UNLOAD);
 
 	//		extr_unload2();
-
-	current_position[E_AXIS] -= 45;
-	plan_buffer_line_curposXYZE(5200 / 60);
-	st_synchronize();
-	current_position[E_AXIS] -= 15;
-	plan_buffer_line_curposXYZE(1000 / 60);
+        #ifdef BONDTECH_LGX
+    	    current_position[E_AXIS] -= 8;
+  	    plan_buffer_line_curposXYZE(5200 / 60);
+  	    st_synchronize();
+  	    current_position[E_AXIS] -= 10;
+  	    plan_buffer_line_curposXYZE(1000 / 60);
+        #else
+	    current_position[E_AXIS] -= 45;
+	    plan_buffer_line_curposXYZE(5200 / 60);
+	    st_synchronize();
+	    current_position[E_AXIS] -= 15;
+	    plan_buffer_line_curposXYZE(1000 / 60);
+        #endif //BONDTECH_LGX
 	st_synchronize();
 	current_position[E_AXIS] -= 20;
 	plan_buffer_line_curposXYZE(1000 / 60);
 	st_synchronize();
-
 	lcd_display_message_fullscreen_P(_T(MSG_PULL_OUT_FILAMENT));
 
 	//disable extruder steppers so filament can be removed
