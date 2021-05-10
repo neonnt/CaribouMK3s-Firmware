@@ -17,12 +17,12 @@ fi
 	sed -i -e 's/\/\/MENU_ITEM_BACK_P(_i("forum.prusa3d.com"))*/MENU_ITEM_BACK_P(_i("forum.prusa3d.com"))/g' $SCRIPT_PATH/Firmware/ultralcd.cpp
 	sed -i -e 's/\/\/MENU_ITEM_BACK_P(_i("howto.prusa3d.com"))*/MENU_ITEM_BACK_P(_i("howto.prusa3d.com"))/g' $SCRIPT_PATH/Firmware/ultralcd.cpp
 	# reset MSG_WIZZARD_WELCOME and WELCOME_MSG
-	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/Firmware/ultralcd.cpp
+	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/Firmware/messages.c
 	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/lang/lang_en.txt
 	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/lang/lang_en_cz.txt
 	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/lang/lang_en_de.txt
 	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/lang/lang_en_es.txt
 	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/lang/lang_en_fr.txt
 	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/lang/lang_en_it.txt
-	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/lang/lang_en_nl.txt
 	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/lang/lang_en_pl.txt
+	sed -i -e "s/Caribou/Original Prusa i3/g" $SCRIPT_PATH/lang/lang_en_nl.txt

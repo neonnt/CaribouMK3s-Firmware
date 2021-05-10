@@ -982,7 +982,7 @@ do
 
 	# Restore files to previous state
 	sed -i -- "s/^#define FW_DEV_VERSION FW_VERSION_$DEV_STATUS/#define FW_DEV_VERSION FW_VERSION_UNKNOWN/g" $SCRIPT_PATH/Firmware/Configuration.h
-	sed -i -- 's/^#define FW_REPOSITORY "Prusa3d"/#define FW_REPOSITORY "Unknown"/g' $SCRIPT_PATH/Firmware/Configuration.h
+	sed -i -- 's/^#define FW_REPOSITORY "Caribou3d"/#define FW_REPOSITORY "Unknown"/g' $SCRIPT_PATH/Firmware/Configuration.h
 	if [ ! -z "$BUILD_ORG" ] ; then
 		sed -i -- "s/^#define FW_COMMIT_NR.*/#define FW_COMMIT_NR $BUILD_ORG/g" $SCRIPT_PATH/Firmware/Configuration.h
 		sed -i -- "s/.*#define FW_COMMIT_HASH.*/#define FW_COMMIT_HASH \"\"/g" $SCRIPT_PATH/Firmware/Configuration.h
