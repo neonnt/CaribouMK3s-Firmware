@@ -2240,6 +2240,8 @@ bool calibrate_z_auto()
 	else {
 		current_position[Z_AXIS] = Z_MAX_POS + 9.0;
 	}
+	#elif BONDTECH_LGX
+	   current_position[Z_AXIS] = Z_MAX_POS + 4.0;
 	#else
 	if ((PRINTER_TYPE == PRINTER_MK3S) || (PRINTER_TYPE == PRINTER_MK3) || (PRINTER_TYPE == PRINTER_MK25S)) {
 		current_position[Z_AXIS] = Z_MAX_POS + 2.0;
@@ -3790,12 +3792,20 @@ void gcode_M701()
 #endif //FSENSOR_QUALITY
 
 		lcd_setstatuspgm(_T(MSG_LOADING_FILAMENT));
-		current_position[E_AXIS] += 40;
+		#ifdef BONDTECH_LGX
+		    current_position[E_AXIS] += 20;
+                #else
+		    current_position[E_AXIS] += 40;
+                #endif //BONDTECH_LGX
 		plan_buffer_line_curposXYZE(400 / 60); //fast sequence
 		st_synchronize();
 
-        raise_z_above(MIN_Z_FOR_LOAD, false);
-		current_position[E_AXIS] += 30;
+		raise_z_above(MIN_Z_FOR_LOAD, false);
+	        #ifdef BONDTECH_LGX
+		    current_position[E_AXIS] += 20;
+                #else
+		    current_position[E_AXIS] += 30;
+		#endif //BONDTECH_LGX    
 		plan_buffer_line_curposXYZE(400 / 60); //fast sequence
 		
 		load_filament_final_feed(); //slow sequence
