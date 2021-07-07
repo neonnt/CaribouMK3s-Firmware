@@ -7,18 +7,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
 "Project-Id-Version: Prusa-Firmware\n"
-<<<<<<< HEAD
-<<<<<<< HEAD
-"POT-Creation-Date: Fr Sep 18 19:58:01 CEST 2020\n"
-"PO-Revision-Date: Fr Sep 18 19:58:01 CEST 2020\n"
-=======
-"POT-Creation-Date: Mo 1. Mär 08:42:22 CET 2021\n"
-"PO-Revision-Date: Mo 1. Mär 08:42:22 CET 2021\n"
->>>>>>> v3.10.0-RC1
-=======
-"POT-Creation-Date: Do 29. Apr 15:37:13 CEST 2021\n"
-"PO-Revision-Date: Do 29. Apr 15:37:13 CEST 2021\n"
->>>>>>> upstream/MK3_3.10.0
+"POT-Creation-Date: Wed 07 Jul 2021 10:17:11 PM CEST\n"
+"PO-Revision-Date: Wed 07 Jul 2021 10:17:11 PM CEST\n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.0.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -30,17 +20,8 @@ msgstr ""
 msgid " 0.3 or older"
 msgstr " 0.3 oder aelter"
 
-<<<<<<< HEAD
-#  c=18
-<<<<<<< HEAD
-#: Marlin_main.cpp:9482
-=======
-#: Marlin_main.cpp:9669
->>>>>>> v3.10.0-RC1
-=======
 # MSG_FS_V_03_OR_OLDER c=18
-#: Marlin_main.cpp:9678
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:9707
 msgid "FS v0.3 or older"
 msgstr "FS 0.3 oder aelter"
 
@@ -49,17 +30,8 @@ msgstr "FS 0.3 oder aelter"
 msgid " 0.4 or newer"
 msgstr " 0.4 oder neuer"
 
-<<<<<<< HEAD
-#  c=18
-<<<<<<< HEAD
-#: Marlin_main.cpp:9481
-=======
-#: Marlin_main.cpp:9668
->>>>>>> v3.10.0-RC1
-=======
 # MSG_FS_V_04_OR_NEWER c=18
-#: Marlin_main.cpp:9677
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:9706
 msgid "FS v0.4 or newer"
 msgstr "FS 0.4 oder neuer"
 
@@ -68,27 +40,8 @@ msgstr "FS 0.4 oder neuer"
 msgid "unknown state"
 msgstr "Status unbekannt"
 
-<<<<<<< HEAD
-# MSG_IMPROVE_BED_OFFSET_AND_SKEW_LINE2 c=14
-#: messages.c:44
-msgid " of 4"
-msgstr " von 4"
-
-# MSG_MEASURE_BED_REFERENCE_HEIGHT_LINE2 c=14
-#: messages.c:67
-msgid " of 9"
-msgstr " von 9"
-
-# MSG_MEASURED_OFFSET
-<<<<<<< HEAD
-#: ultralcd.cpp:3065
-=======
-#: ultralcd.cpp:3015
->>>>>>> v3.10.0-RC1
-=======
 # MSG_MEASURED_OFFSET c=20
-#: ultralcd.cpp:2834
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2837
 msgid "[0;0] point offset"
 msgstr "[0;0] Punktversatz"
 
@@ -102,60 +55,23 @@ msgstr "Crash Erkennung kann\x0anur im Modus Normal\x0agenutzt werden"
 msgid "WARNING:\x0aCrash detection\x0adisabled in\x0aStealth mode"
 msgstr "WARNUNG:\x0aCrash Erkennung\x0adeaktiviert im\x0aStealth Modus"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:2454
-=======
-#: ultralcd.cpp:2430
->>>>>>> v3.10.0-RC1
-msgid ">Cancel"
-msgstr ">Abbruch"
-
 # MSG_BABYSTEPPING_Z c=15
-<<<<<<< HEAD
-#: ultralcd.cpp:3185
-=======
-#: ultralcd.cpp:3135
->>>>>>> v3.10.0-RC1
-=======
-# MSG_BABYSTEPPING_Z c=15
-#: ultralcd.cpp:2955
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2958
 msgid "Adjusting Z:"
 msgstr "Z Anpassen:"
 
 # MSG_SELFTEST_CHECK_ALLCORRECT c=20
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:8717
-=======
-#: ultralcd.cpp:8507
->>>>>>> v3.10.0-RC1
-msgid "All correct      "
-msgstr "Alles richtig    "
-=======
-#: ultralcd.cpp:8430
+#: ultralcd.cpp:8451
 msgid "All correct"
 msgstr "Alles richtig"
->>>>>>> upstream/MK3_3.10.0
 
 # MSG_WIZARD_DONE c=20 r=8
 #: messages.c:118
 msgid "All is done. Happy printing!"
 msgstr "Alles abgeschlossen. Viel Spass beim Drucken!"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:1957
-=======
-#: ultralcd.cpp:1915
->>>>>>> v3.10.0-RC1
-=======
 # MSG_AMBIENT c=14
-#: ultralcd.cpp:1724
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1725
 msgid "Ambient"
 msgstr "Raumtemp."
 
@@ -165,28 +81,12 @@ msgid "Auto"
 msgstr ""
 
 # MSG_PRESS c=20 r=2
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:2610
-=======
-#: ultralcd.cpp:2594
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:2406
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2409
 msgid "and press the knob"
 msgstr "und Knopf druecken"
 
 # MSG_CONFIRM_CARRIAGE_AT_THE_TOP c=20 r=2
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3507
-=======
-#: ultralcd.cpp:3456
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3276
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3279
 msgid "Are left and right Z~carriages all up?"
 msgstr "Sind linke+rechte Z- Schlitten ganz oben?"
 
@@ -196,87 +96,34 @@ msgid "Auto home"
 msgstr "Startposition"
 
 # MSG_AUTOLOAD_FILAMENT c=18
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:7005
-=======
-#: ultralcd.cpp:6837
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:6653
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:6673
 msgid "AutoLoad filament"
 msgstr "AutoLaden Filament"
 
 # MSG_AUTOLOADING_ONLY_IF_FSENS_ON c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:4453
-=======
-#: ultralcd.cpp:4418
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4238
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4252
 msgid "Autoloading filament available only when filament sensor is turned on..."
 msgstr "Automatisches Laden Filament nur bei eingeschaltetem Fil. sensor verfuegbar..."
 
 # MSG_AUTOLOADING_ENABLED c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:2805
-=======
-#: ultralcd.cpp:2757
->>>>>>> v3.10.0-RC1
-msgid "Autoloading filament is active, just press the knob and insert filament..."
-msgstr "Automatisches Laden Filament ist aktiv, Knopf druecken und Filament einlegen..."
-
-# MSG_SELFTEST_AXIS_LENGTH
-<<<<<<< HEAD
-#: ultralcd.cpp:8384
-=======
-#: ultralcd.cpp:8190
->>>>>>> v3.10.0-RC1
-msgid "Axis length"
-msgstr "Achsenlaenge"
-
-# MSG_SELFTEST_AXIS
-<<<<<<< HEAD
-#: ultralcd.cpp:8386
-=======
-#: ultralcd.cpp:8191
->>>>>>> v3.10.0-RC1
-msgid "Axis"
-msgstr "Achse"
-
-# MSG_SELFTEST_BEDHEATER
-<<<<<<< HEAD
-#: ultralcd.cpp:8328
-=======
-#: ultralcd.cpp:8148
->>>>>>> v3.10.0-RC1
-msgid "Bed / Heater"
-msgstr "Bett / Heizung"
-=======
-#: ultralcd.cpp:2569
+#: ultralcd.cpp:2572
 msgid "Autoloading filament is active, just press the knob and insert filament..."
 msgstr "Automatisches Laden Filament ist aktiv, Knopf druecken und Filament einlegen..."
 
 # MSG_SELFTEST_AXIS_LENGTH c=20
-#: ultralcd.cpp:8113
+#: ultralcd.cpp:8134
 msgid "Axis length"
 msgstr "Achsenlaenge"
 
 # MSG_SELFTEST_AXIS c=16
-#: ultralcd.cpp:8114
+#: ultralcd.cpp:8135
 msgid "Axis"
 msgstr "Achse"
 
 # MSG_SELFTEST_BEDHEATER c=20
-#: ultralcd.cpp:8071
+#: ultralcd.cpp:8092
 msgid "Bed/Heater"
 msgstr "Bett/Heizung"
->>>>>>> upstream/MK3_3.10.0
 
 # MSG_BED_DONE c=20
 #: messages.c:15
@@ -288,35 +135,15 @@ msgstr "Bett OK"
 msgid "Bed Heating"
 msgstr "Bett aufwaermen"
 
-<<<<<<< HEAD
-# MSG_BED_CORRECTION_MENU
-<<<<<<< HEAD
-#: ultralcd.cpp:5901
-=======
-#: ultralcd.cpp:5904
->>>>>>> v3.10.0-RC1
-msgid "Bed level correct"
-msgstr "Ausgleich Bett ok"
-
-# MSG_BELTTEST c=17
-<<<<<<< HEAD
-#: ultralcd.cpp:5881
-=======
-#: ultralcd.cpp:5884
->>>>>>> v3.10.0-RC1
-msgid "Belt test        "
-msgstr "Riementest       "
-=======
 # MSG_BED_CORRECTION_MENU c=18
-#: ultralcd.cpp:5719
+#: ultralcd.cpp:5733
 msgid "Bed level correct"
 msgstr "Ausgleich Bett ok"
 
 # MSG_BELTTEST c=18
-#: ultralcd.cpp:5699
+#: ultralcd.cpp:5713
 msgid "Belt test"
 msgstr "Riementest"
->>>>>>> upstream/MK3_3.10.0
 
 # MSG_BED_LEVELING_FAILED_POINT_LOW c=20 r=6
 #: messages.c:17
@@ -338,13 +165,8 @@ msgstr "Helligkeit"
 msgid "Bed"
 msgstr "Bett"
 
-<<<<<<< HEAD
-# MSG_MENU_BELT_STATUS c=18
-#: ultralcd.cpp:2010
-=======
 # MSG_BELT_STATUS c=18
 #: messages.c:19
->>>>>>> v3.10.0-RC1
 msgid "Belt status"
 msgstr "Riemstatus"
 
@@ -353,31 +175,13 @@ msgstr "Riemstatus"
 msgid "Blackout occurred. Recover print?"
 msgstr "Stromausfall! Druck wiederherstellen?"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:8719
-=======
-#: ultralcd.cpp:8509
->>>>>>> v3.10.0-RC1
-=======
 # MSG_CALIBRATING_HOME c=20
-#: ultralcd.cpp:8432
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8453
 msgid "Calibrating home"
 msgstr "Kalib. Startpos"
 
-<<<<<<< HEAD
-# MSG_CALIBRATE_BED
-<<<<<<< HEAD
-#: ultralcd.cpp:5890
-=======
-#: ultralcd.cpp:5893
->>>>>>> v3.10.0-RC1
-=======
 # MSG_CALIBRATE_BED c=18
-#: ultralcd.cpp:5708
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5722
 msgid "Calibrate XYZ"
 msgstr "Kalibrierung XYZ"
 
@@ -386,17 +190,8 @@ msgstr "Kalibrierung XYZ"
 msgid "Calibrate Z"
 msgstr "Kalibrierung Z"
 
-<<<<<<< HEAD
-# MSG_CALIBRATE_PINDA c=17 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:4645
-=======
-#: ultralcd.cpp:4637
->>>>>>> v3.10.0-RC1
-=======
 # MSG_CALIBRATE_PINDA c=17
-#: ultralcd.cpp:4450
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4464
 msgid "Calibrate"
 msgstr "Kalibrieren"
 
@@ -406,15 +201,7 @@ msgid ">Cancel"
 msgstr ">Abbruch"
 
 # MSG_MOVE_CARRIAGE_TO_THE_TOP c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3470
-=======
-#: ultralcd.cpp:3419
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3239
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3242
 msgid "Calibrating XYZ. Rotate the knob to move the Z carriage up to the end stoppers. Click when done."
 msgstr "XYZ Kalibrieren: Drehen Sie den Knopf bis der obere Anschlag erreicht wird. Anschliessend den Knopf druecken."
 
@@ -424,15 +211,7 @@ msgid "Calibrating Z"
 msgstr "Kalibrierung Z"
 
 # MSG_MOVE_CARRIAGE_TO_THE_TOP_Z c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3470
-=======
-#: ultralcd.cpp:3419
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3239
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3242
 msgid "Calibrating Z. Rotate the knob to move the Z carriage up to the end stoppers. Click when done."
 msgstr "Z Kalibrieren: Drehen Sie den Knopf bis der obere Anschlag erreicht wird. Anschliessend den Knopf druecken."
 
@@ -446,45 +225,18 @@ msgstr "Kalibrierung OK"
 msgid "Calibration"
 msgstr "Kalibrierung"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4823
-=======
-#: ultralcd.cpp:4815
->>>>>>> v3.10.0-RC1
-msgid "Cancel"
-msgstr "Abbruch"
-
-# MSG_SD_REMOVED
-<<<<<<< HEAD
-#: ultralcd.cpp:9155
-=======
-#: ultralcd.cpp:8955
->>>>>>> v3.10.0-RC1
-=======
 # MSG_SD_REMOVED c=20
-#: ultralcd.cpp:8869
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8892
 msgid "Card removed"
 msgstr "SD Karte entfernt"
 
 # MSG_CHECKING_FILE c=17
-#: ultralcd.cpp:8520
+#: ultralcd.cpp:8541
 msgid "Checking file"
 msgstr "Ueberpruefe Datei"
 
-<<<<<<< HEAD
-# MSG_NOT_COLOR
-<<<<<<< HEAD
-#: ultralcd.cpp:2710
-=======
-#: ultralcd.cpp:2674
->>>>>>> v3.10.0-RC1
-=======
 # MSG_NOT_COLOR c=19
-#: ultralcd.cpp:2486
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2489
 msgid "Color not correct"
 msgstr "Falsche Farbe"
 
@@ -493,17 +245,8 @@ msgstr "Falsche Farbe"
 msgid "Cooldown"
 msgstr "Abkuehlen"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4578
-=======
-#: ultralcd.cpp:4543
->>>>>>> v3.10.0-RC1
-=======
 # MSG_COPY_SEL_LANG c=20 r=3
-#: ultralcd.cpp:4356
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4370
 msgid "Copy selected language?"
 msgstr "Gewaehlte Sprache kopieren?"
 
@@ -512,17 +255,8 @@ msgstr "Gewaehlte Sprache kopieren?"
 msgid "Crash det."
 msgstr "Crash Erk."
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4958
-=======
-#: ultralcd.cpp:4950
->>>>>>> v3.10.0-RC1
-=======
 # MSG_CHOOSE_FIL_1ST_LAYERCAL c=20 r=7
-#: ultralcd.cpp:4763
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4777
 msgid "Choose a filament for the First Layer Calibration and select it in the on-screen menu."
 msgstr "Waehlen Sie ein Filament fuer Erste Schichtkalibrierung aus und waehlen Sie es im On-Screen-Menu aus."
 
@@ -536,45 +270,18 @@ msgstr "Crash erkannt."
 msgid "Crash detected. Resume print?"
 msgstr "Crash erkannt. Druck fortfuehren?"
 
-<<<<<<< HEAD
-# 
-#: ultralcd.cpp:1786
-=======
 # MSG_CRASH c=7
-<<<<<<< HEAD
-#: messages.c:27
->>>>>>> v3.10.0-RC1
-msgid "Crash"
-msgstr ""
-
-# MSG_CURRENT c=19 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:6045
-=======
-#: ultralcd.cpp:6035
->>>>>>> v3.10.0-RC1
-msgid "Current"
-msgstr "Aktuelles"
-
-# MSG_DATE c=17 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:2167
-=======
-#: ultralcd.cpp:2118
->>>>>>> v3.10.0-RC1
-=======
 #: messages.c:28
 msgid "Crash"
 msgstr ""
 
 # MSG_CURRENT c=19
-#: ultralcd.cpp:5850
+#: ultralcd.cpp:5864
 msgid "Current"
 msgstr "Aktuelles"
 
 # MSG_DATE c=17
-#: ultralcd.cpp:1927
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1930
 msgid "Date:"
 msgstr "Datum:"
 
@@ -583,17 +290,8 @@ msgstr "Datum:"
 msgid "Community made"
 msgstr "Von der Community"
 
-<<<<<<< HEAD
-# MSG_DISABLE_STEPPERS
-<<<<<<< HEAD
-#: ultralcd.cpp:5781
-=======
-#: ultralcd.cpp:5785
->>>>>>> v3.10.0-RC1
-=======
 # MSG_DISABLE_STEPPERS c=18
-#: ultralcd.cpp:5599
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5613
 msgid "Disable steppers"
 msgstr "Motoren aus"
 
@@ -608,28 +306,12 @@ msgid "Cont."
 msgstr ""
 
 # MSG_WIZARD_REPEAT_V2_CAL c=20 r=7
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5133
-=======
-#: ultralcd.cpp:5129
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4942
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4956
 msgid "Do you want to repeat last step to readjust distance between nozzle and heatbed?"
 msgstr "Moechten Sie den letzten Schritt wiederholen, um den Abstand zwischen Duese und Druckbett neu einzustellen?"
 
 # MSG_EXTRUDER_CORRECTION c=13
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5202
-=======
-#: ultralcd.cpp:5198
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:5011
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5025
 msgid "E-correct:"
 msgstr "E-Korrektur:"
 
@@ -638,70 +320,28 @@ msgstr "E-Korrektur:"
 msgid "Eject filament"
 msgstr "Fil. auswerfen"
 
-<<<<<<< HEAD
-# MSG_EJECTING_FILAMENT c=20 r=1
-<<<<<<< HEAD
-#: mmu.cpp:1435
-=======
-=======
 # MSG_EJECTING_FILAMENT c=20
->>>>>>> upstream/MK3_3.10.0
-#: mmu.cpp:1414
->>>>>>> v3.10.0-RC1
+#: mmu.cpp:1433
 msgid "Ejecting filament"
 msgstr "werfe Filament aus"
 
 # MSG_SELFTEST_ENDSTOP_NOTHIT c=20
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:8352
-=======
-#: ultralcd.cpp:8166
->>>>>>> v3.10.0-RC1
-msgid "Endstop not hit"
-msgstr "Ende nicht getroffen"
-
-# MSG_SELFTEST_ENDSTOP
-<<<<<<< HEAD
-#: ultralcd.cpp:8346
-=======
-#: ultralcd.cpp:8161
->>>>>>> v3.10.0-RC1
-msgid "Endstop"
-msgstr "Endanschlag"
-
-# MSG_SELFTEST_ENDSTOPS
-<<<<<<< HEAD
-#: ultralcd.cpp:8334
-=======
-#: ultralcd.cpp:8152
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:8089
+#: ultralcd.cpp:8110
 msgid "Endstop not hit"
 msgstr "Ende nicht getroffen"
 
 # MSG_SELFTEST_ENDSTOP c=16
-#: ultralcd.cpp:8084
+#: ultralcd.cpp:8105
 msgid "Endstop"
 msgstr "Endanschlag"
 
 # MSG_SELFTEST_ENDSTOPS c=20
-#: ultralcd.cpp:8075
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8096
 msgid "Endstops"
 msgstr "Endschalter"
 
 # MSG_STACK_ERROR c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:7042
-=======
-#: ultralcd.cpp:6872
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:6688
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:6708
 msgid "Error - static memory has been overwritten"
 msgstr "Fehler - statischer Speicher wurde ueberschrieben"
 
@@ -715,29 +355,13 @@ msgstr "Fil. schneiden"
 msgid "Cutter"
 msgstr "Messer"
 
-<<<<<<< HEAD
-#  c=18
-<<<<<<< HEAD
-#: mmu.cpp:1407
-=======
-=======
 # MSG_MMU_CUTTING_FIL c=18
->>>>>>> upstream/MK3_3.10.0
-#: mmu.cpp:1386
->>>>>>> v3.10.0-RC1
+#: mmu.cpp:1405
 msgid "Cutting filament"
 msgstr "Schneide filament"
 
 # MSG_FSENS_NOT_RESPONDING c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:4466
-=======
-#: ultralcd.cpp:4431
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4251
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4265
 msgid "ERROR: Filament sensor is not responding, please check connection."
 msgstr "FEHLER: Filament- sensor reagiert nicht, bitte Verbindung pruefen."
 
@@ -752,28 +376,12 @@ msgid "ERROR:"
 msgstr "FEHLER:"
 
 # MSG_SELFTEST_EXTRUDER_FAN_SPEED c=18
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:8726
-=======
-#: ultralcd.cpp:8515
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:8438
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8459
 msgid "Extruder fan:"
 msgstr "Extruder Luefter:"
 
 # MSG_INFO_EXTRUDER c=18
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:2204
-=======
-#: ultralcd.cpp:2173
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:1982
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1985
 msgid "Extruder info"
 msgstr "Extruder Info"
 
@@ -782,17 +390,8 @@ msgstr "Extruder Info"
 msgid "Extruder"
 msgstr ""
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:7029
-=======
-#: ultralcd.cpp:6859
->>>>>>> v3.10.0-RC1
-=======
 # MSG_MMU_FAIL_STATS c=18
-#: ultralcd.cpp:6675
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:6695
 msgid "Fail stats MMU"
 msgstr "MMU-Fehler"
 
@@ -801,17 +400,8 @@ msgstr "MMU-Fehler"
 msgid "F. autoload"
 msgstr "F. autoladen"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:7026
-=======
-#: ultralcd.cpp:6856
->>>>>>> v3.10.0-RC1
-=======
 # MSG_FAIL_STATS c=18
-#: ultralcd.cpp:6672
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:6692
 msgid "Fail stats"
 msgstr "Fehlerstats"
 
@@ -825,17 +415,8 @@ msgstr "Luefter-Tempo"
 msgid "Fan test"
 msgstr "Lueftertest"
 
-<<<<<<< HEAD
-# MSG_FANS_CHECK
-#: ultralcd.cpp:5789
-=======
 # MSG_FANS_CHECK c=13
-<<<<<<< HEAD
-#: messages.c:32
->>>>>>> v3.10.0-RC1
-=======
 #: messages.c:33
->>>>>>> upstream/MK3_3.10.0
 msgid "Fans check"
 msgstr "Luefter Chk."
 
@@ -844,17 +425,10 @@ msgstr "Luefter Chk."
 msgid "Fil. sensor"
 msgstr "Fil. Sensor"
 
-<<<<<<< HEAD
-#  c=14
-#: ultralcd.cpp:1785
-msgid "Filam. runouts"
-msgstr "Filam. Maengel"
-=======
 # MSG_FIL_RUNOUTS c=15
 #: messages.c:34
 msgid "Fil. runouts"
 msgstr "Fil. Maengel"
->>>>>>> v3.10.0-RC1
 
 # MSG_FILAMENT_CLEAN c=20 r=2
 #: messages.c:37
@@ -862,15 +436,7 @@ msgid "Filament extruding & with correct color?"
 msgstr "Filament extrudiert mit richtiger Farbe?"
 
 # MSG_NOT_LOADED c=19
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:2706
-=======
-#: ultralcd.cpp:2673
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:2485
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2488
 msgid "Filament not loaded"
 msgstr "Fil. nicht geladen"
 
@@ -880,29 +446,12 @@ msgid "Filament sensor"
 msgstr "Filamentsensor"
 
 # MSG_FILAMENT_USED c=19
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:2870
-=======
-#: ultralcd.cpp:2822
->>>>>>> v3.10.0-RC1
-msgid "Filament used"
-msgstr "Filament benutzt"
-
-# MSG_PRINT_TIME c=19 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:2871
-=======
-#: ultralcd.cpp:2823
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:2634
+#: ultralcd.cpp:2637
 msgid "Filament used"
 msgstr "Filament benutzt"
 
 # MSG_PRINT_TIME c=19
-#: ultralcd.cpp:2635
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2638
 msgid "Print time"
 msgstr "Druckzeit"
 
@@ -912,15 +461,7 @@ msgid "FS Action"
 msgstr "FS Aktion"
 
 # MSG_FILE_INCOMPLETE c=20 r=3
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:8854
-=======
-#: ultralcd.cpp:8657
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:8572
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8595
 msgid "File incomplete. Continue anyway?"
 msgstr "Datei unvollstaendig Trotzdem fortfahren?"
 
@@ -935,15 +476,7 @@ msgid "First layer cal."
 msgstr "Erste-Schicht Kal."
 
 # MSG_WIZARD_SELFTEST c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5054
-=======
-#: ultralcd.cpp:5050
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4863
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4877
 msgid "First, I will run the selftest to check most common assembly problems."
 msgstr "Zunaechst fuehre ich den Selbsttest durch, um die haeufigsten Probleme beim Zusammenbau zu ueberpruefen."
 
@@ -952,90 +485,33 @@ msgstr "Zunaechst fuehre ich den Selbsttest durch, um die haeufigsten Probleme b
 msgid "Fix the issue and then press button on MMU unit."
 msgstr "Beseitigen Sie das Problem und druecken Sie dann den Knopf am MMU."
 
-<<<<<<< HEAD
-# MSG_FLOW
-<<<<<<< HEAD
-#: ultralcd.cpp:7169
-=======
-#: ultralcd.cpp:6999
->>>>>>> v3.10.0-RC1
-msgid "Flow"
-msgstr "Durchfluss"
-
-# MSG_PRUSA3D_FORUM
-<<<<<<< HEAD
-#: ultralcd.cpp:2160
-=======
-#: ultralcd.cpp:2111
->>>>>>> v3.10.0-RC1
-msgid "forum.prusa3d.com"
-msgstr ""
-
-=======
 # MSG_FLOW c=15
-#: ultralcd.cpp:6815
+#: ultralcd.cpp:6835
 msgid "Flow"
 msgstr "Durchfluss"
 
->>>>>>> upstream/MK3_3.10.0
 # MSG_SELFTEST_COOLING_FAN c=20
 #: messages.c:88
 msgid "Front print fan?"
 msgstr "Teile Luefter?"
 
-<<<<<<< HEAD
-# MSG_BED_CORRECTION_FRONT c=14 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:3267
-=======
-#: ultralcd.cpp:3217
->>>>>>> v3.10.0-RC1
-msgid "Front side[um]"
-msgstr "Vorne [um]"
-
-# MSG_SELFTEST_FANS
-<<<<<<< HEAD
-#: ultralcd.cpp:8392
-=======
-#: ultralcd.cpp:8196
->>>>>>> v3.10.0-RC1
-=======
 # MSG_BED_CORRECTION_FRONT c=14
-#: ultralcd.cpp:3037
+#: ultralcd.cpp:3040
 msgid "Front side[um]"
 msgstr "Vorne [um]"
 
 # MSG_SELFTEST_FANS c=20
-#: ultralcd.cpp:8119
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8140
 msgid "Front/left fans"
 msgstr "Teile/Extr. Luefter"
 
-<<<<<<< HEAD
-# MSG_SELFTEST_HEATERTHERMISTOR
-<<<<<<< HEAD
-#: ultralcd.cpp:8322
-=======
-#: ultralcd.cpp:8144
->>>>>>> v3.10.0-RC1
-msgid "Heater/Thermistor"
-msgstr "Heizung/Thermistor"
-
-# MSG_BED_HEATING_SAFETY_DISABLED
-<<<<<<< HEAD
-#: Marlin_main.cpp:9472
-=======
-#: Marlin_main.cpp:9659
->>>>>>> v3.10.0-RC1
-=======
 # MSG_SELFTEST_HEATERTHERMISTOR c=20
-#: ultralcd.cpp:8067
+#: ultralcd.cpp:8088
 msgid "Heater/Thermistor"
 msgstr "Heizung/Thermistor"
 
 # MSG_BED_HEATING_SAFETY_DISABLED c=20 r=4
-#: Marlin_main.cpp:9668
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:9697
 msgid "Heating disabled by safety timer."
 msgstr "Heizung durch Sicherheitstimer deaktiviert."
 
@@ -1050,57 +526,22 @@ msgid "Heating"
 msgstr "Aufwaermen"
 
 # MSG_WIZARD_WELCOME c=20 r=7
-<<<<<<< HEAD
-#: ultralcd.cpp:5033
-=======
 #: messages.c:121
->>>>>>> v3.10.0-RC1
 msgid "Hi, I am your Original Prusa i3 printer. Would you like me to guide you through the setup process?"
 msgstr "Hallo, ich bin Ihr Original Prusa i3 Drucker. Moechten Sie, dass ich Sie durch den Einrich- tungsablauf fuehre?"
 
-<<<<<<< HEAD
-# MSG_PRUSA3D_HOWTO
-<<<<<<< HEAD
-#: ultralcd.cpp:2161
-=======
-#: ultralcd.cpp:2112
->>>>>>> v3.10.0-RC1
-msgid "howto.prusa3d.com"
-msgstr ""
-
-# MSG_FILAMENTCHANGE
-#: messages.c:42
-msgid "Change filament"
-msgstr "Filament-Wechsel"
-
-# MSG_CHANGE_SUCCESS
-<<<<<<< HEAD
-#: ultralcd.cpp:2621
-=======
-#: ultralcd.cpp:2603
->>>>>>> v3.10.0-RC1
-=======
 # MSG_FILAMENTCHANGE c=18
 #: messages.c:43
 msgid "Change filament"
 msgstr "Filament-Wechsel"
 
 # MSG_CHANGE_SUCCESS c=20
-#: ultralcd.cpp:2415
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2418
 msgid "Change success!"
 msgstr "Wechsel erfolgr.!"
 
 # MSG_CORRECTLY c=20
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:2698
-=======
-#: ultralcd.cpp:2671
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:2483
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2486
 msgid "Changed correctly?"
 msgstr "Wechsel ok?"
 
@@ -1110,54 +551,20 @@ msgid "Checking bed"
 msgstr "Pruefe Bett"
 
 # MSG_SELFTEST_CHECK_ENDSTOPS c=20
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:8708
-=======
-#: ultralcd.cpp:8498
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:8421
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8442
 msgid "Checking endstops"
 msgstr "Pruefe Endschalter"
 
 # MSG_SELFTEST_CHECK_HOTEND c=20
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:8714
-=======
-#: ultralcd.cpp:8504
->>>>>>> v3.10.0-RC1
-msgid "Checking hotend  "
-msgstr "Pruefe Duese  "
-=======
-#: ultralcd.cpp:8427
+#: ultralcd.cpp:8448
 msgid "Checking hotend"
 msgstr "Pruefe Duese"
->>>>>>> upstream/MK3_3.10.0
 
 # MSG_SELFTEST_CHECK_FSENSOR c=20
 #: messages.c:95
 msgid "Checking sensors"
 msgstr "Pruefe Sensoren"
 
-<<<<<<< HEAD
-# MSG_SELFTEST_CHECK_X c=20
-#: ultralcd.cpp:7526
-msgid "Checking X axis  "
-msgstr "Pruefe X Achse "
-
-# MSG_SELFTEST_CHECK_Y c=20
-#: ultralcd.cpp:7535
-msgid "Checking Y axis  "
-msgstr "Pruefe Y Achse "
-
-# MSG_SELFTEST_CHECK_Z c=20
-#: ultralcd.cpp:8711
-msgid "Checking Z axis  "
-msgstr "Pruefe Z Achse "
-=======
 # MSG_CHECKING_X c=20
 #: messages.c:23
 msgid "Checking X axis"
@@ -1169,10 +576,9 @@ msgid "Checking Y axis"
 msgstr "Pruefe Y Achse"
 
 # MSG_SELFTEST_CHECK_Z c=20
-#: ultralcd.cpp:8424
+#: ultralcd.cpp:8445
 msgid "Checking Z axis"
 msgstr "Pruefe Z Achse"
->>>>>>> v3.10.0-RC1
 
 # MSG_CHOOSE_EXTRUDER c=20
 #: messages.c:54
@@ -1190,28 +596,12 @@ msgid "Filament"
 msgstr ""
 
 # MSG_WIZARD_XYZ_CAL c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5063
-=======
-#: ultralcd.cpp:5059
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4872
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4886
 msgid "I will run xyz calibration now. It will take approx. 12 mins."
 msgstr "Ich werde jetzt die XYZ-Kalibrierung durchfuehren. Es wird ca. 12 Minuten dauern."
 
 # MSG_WIZARD_Z_CAL c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5071
-=======
-#: ultralcd.cpp:5067
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4880
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4894
 msgid "I will run z calibration now."
 msgstr "Ich werde jetzt die Z Kalibrierung durchfuehren."
 
@@ -1221,29 +611,12 @@ msgid "Info screen"
 msgstr "Infoanzeige"
 
 # MSG_INSERT_FILAMENT c=20
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:2606
-msgid "Insert filament"
-msgstr "Filament einlegen"
-
-# MSG_WIZARD_FILAMENT_LOADED c=20 r=2
-#: ultralcd.cpp:4843
-=======
-#: ultralcd.cpp:2591
-=======
-#: ultralcd.cpp:2403
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2406
 msgid "Insert filament"
 msgstr "Filament einlegen"
 
 # MSG_FILAMENT_LOADED c=20 r=2
-<<<<<<< HEAD
-#: messages.c:37
->>>>>>> v3.10.0-RC1
-=======
 #: messages.c:38
->>>>>>> upstream/MK3_3.10.0
 msgid "Is filament loaded?"
 msgstr "Ist das Filament geladen?"
 
@@ -1252,17 +625,8 @@ msgstr "Ist das Filament geladen?"
 msgid "Is steel sheet on heatbed?"
 msgstr "Liegt das Stahlblech auf dem Heizbett?"
 
-<<<<<<< HEAD
-# 
-#: ultralcd.cpp:1728
-=======
 # MSG_LAST_PRINT_FAILURES c=20
-<<<<<<< HEAD
-#: messages.c:56
->>>>>>> v3.10.0-RC1
-=======
 #: messages.c:57
->>>>>>> upstream/MK3_3.10.0
 msgid "Last print failures"
 msgstr "Letzte Druckfehler"
 
@@ -1271,31 +635,13 @@ msgstr "Letzte Druckfehler"
 msgid "Hi, I am your Original Prusa i3 printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
 msgstr "Hallo, ich bin Ihr Original Prusa i3 Drucker. Ich werde Sie durch einen kurzen Einrichtungsprozess fuehren, bei dem die Z-Achse kalibriert wird. Danach sind Sie bereit fuer den Druck."
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:5141
-msgid "If you have additional steel sheets, calibrate their presets in Settings - HW Setup - Steel sheets."
-msgstr "Wenn Sie zusaetzliche Stahlbleche haben, kalibrieren Sie deren Voreinstellungen unter Einstellungen - HW Setup - Stahlbleche."
-
-# 
-#: ultralcd.cpp:1705
-=======
-#: ultralcd.cpp:5137
-=======
 # MSG_ADDITIONAL_SHEETS c=20 r=9
-#: ultralcd.cpp:4950
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4964
 msgid "If you have additional steel sheets, calibrate their presets in Settings - HW Setup - Steel sheets."
 msgstr "Wenn Sie zusaetzliche Stahlbleche haben, kalibrieren Sie deren Voreinstellungen unter Einstellungen - HW Setup - Stahlbleche."
 
 # MSG_LAST_PRINT c=18
-<<<<<<< HEAD
-#: messages.c:55
->>>>>>> v3.10.0-RC1
-=======
 #: messages.c:56
->>>>>>> upstream/MK3_3.10.0
 msgid "Last print"
 msgstr "Letzter Druck"
 
@@ -1304,45 +650,18 @@ msgstr "Letzter Druck"
 msgid "Left hotend fan?"
 msgstr "Extruder Luefter?"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:2994
-=======
-#: ultralcd.cpp:2946
->>>>>>> v3.10.0-RC1
-msgid "Left"
-msgstr "Links"
-
-# MSG_BED_CORRECTION_LEFT c=14 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:3265
-=======
-#: ultralcd.cpp:3215
->>>>>>> v3.10.0-RC1
-msgid "Left side [um]"
-msgstr "Links [um]"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:5804
-=======
-#: ultralcd.cpp:5808
->>>>>>> v3.10.0-RC1
-=======
 # MSG_LEFT c=10
-#: ultralcd.cpp:2765
+#: ultralcd.cpp:2768
 msgid "Left"
 msgstr "Links"
 
 # MSG_BED_CORRECTION_LEFT c=14
-#: ultralcd.cpp:3035
+#: ultralcd.cpp:3038
 msgid "Left side [um]"
 msgstr "Links [um]"
 
 # MSG_LIN_CORRECTION c=18
-#: ultralcd.cpp:5623
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5637
 msgid "Lin. correction"
 msgstr "Lineare Korrektur"
 
@@ -1351,17 +670,8 @@ msgstr "Lineare Korrektur"
 msgid "Live adjust Z"
 msgstr "Z einstellen"
 
-<<<<<<< HEAD
-#  c=20 r=6
-<<<<<<< HEAD
-#: ultralcd.cpp:7571
-=======
-#: ultralcd.cpp:7397
->>>>>>> v3.10.0-RC1
-=======
 # MSG_INSERT_FIL c=20 r=6
-#: ultralcd.cpp:7320
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:7340
 msgid "Insert the filament (do not load it) into the extruder and then press the knob."
 msgstr "Stecken Sie das Filament (nicht laden) in den Extruder und druecken Sie dann den Knopf."
 
@@ -1370,17 +680,8 @@ msgstr "Stecken Sie das Filament (nicht laden) in den Extruder und druecken Sie 
 msgid "Load filament"
 msgstr "Filament laden"
 
-<<<<<<< HEAD
-# MSG_LOADING_COLOR
-<<<<<<< HEAD
-#: ultralcd.cpp:2646
-=======
-#: ultralcd.cpp:2625
->>>>>>> v3.10.0-RC1
-=======
 # MSG_LOADING_COLOR c=20
-#: ultralcd.cpp:2437
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2440
 msgid "Loading color"
 msgstr "Lade Farbe"
 
@@ -1389,36 +690,18 @@ msgstr "Lade Farbe"
 msgid "Loading filament"
 msgstr "Filament laedt"
 
-<<<<<<< HEAD
-# MSG_LOOSE_PULLEY c=20 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:8376
-=======
-#: ultralcd.cpp:8184
->>>>>>> v3.10.0-RC1
-msgid "Loose pulley"
-msgstr "Lose Riemenscheibe"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:6988
-=======
-#: ultralcd.cpp:6822
->>>>>>> v3.10.0-RC1
-=======
 # MSG_ITERATION c=12
 #: messages.c:53
 msgid "Iteration"
 msgstr "Wiederholung"
 
 # MSG_LOOSE_PULLEY c=20
-#: ultralcd.cpp:8107
+#: ultralcd.cpp:8128
 msgid "Loose pulley"
 msgstr "Lose Riemenscheibe"
 
 # MSG_LOAD_TO_NOZZLE c=18
-#: ultralcd.cpp:6638
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:6658
 msgid "Load to nozzle"
 msgstr "In Nozzle laden"
 
@@ -1447,17 +730,8 @@ msgstr "Dimmwert"
 msgid "Measuring reference height of calibration point"
 msgstr "Messen der Referenzhoehe des Kalibrierpunktes"
 
-<<<<<<< HEAD
-# MSG_MESH_BED_LEVELING
-#: ultralcd.cpp:5896
-=======
 # MSG_MESH_BED_LEVELING c=18
-<<<<<<< HEAD
-#: messages.c:152
->>>>>>> v3.10.0-RC1
-=======
 #: messages.c:148
->>>>>>> upstream/MK3_3.10.0
 msgid "Mesh Bed Leveling"
 msgstr "MeshBett Ausgleich"
 
@@ -1471,50 +745,23 @@ msgstr "MMU OK. Position wiederherstellen..."
 msgid "MMU OK. Resuming temperature..."
 msgstr "MMU OK. Temperatur wiederherstellen..."
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:3035
-msgid "Measured skew"
-msgstr "Schraeglauf"
-
-# 
-#: ultralcd.cpp:1729
-=======
-#: ultralcd.cpp:2987
-=======
 # MSG_MEASURED_SKEW c=14
-#: ultralcd.cpp:2806
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2809
 msgid "Measured skew"
 msgstr "Schraeglauf"
 
 # MSG_MMU_FAILS c=15
 #: messages.c:69
->>>>>>> v3.10.0-RC1
 msgid "MMU fails"
 msgstr "MMU Fehler"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: mmu.cpp:1628
-msgid "MMU load failed     "
-msgstr "MMU Ladefehler"
-
-# 
-#: ultralcd.cpp:1730
-=======
-=======
 # MSG_MMU_LOAD_FAILED c=20
->>>>>>> upstream/MK3_3.10.0
-#: mmu.cpp:1586
+#: mmu.cpp:1626
 msgid "MMU load failed"
 msgstr "MMU Ladefehler"
 
 # MSG_MMU_LOAD_FAILS c=15
 #: messages.c:70
->>>>>>> v3.10.0-RC1
 msgid "MMU load fails"
 msgstr "MMU Ladefehler"
 
@@ -1548,17 +795,8 @@ msgstr "Leise"
 msgid "MMU needs user attention."
 msgstr "MMU erfordert Benutzereingriff."
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:1756
-=======
-#: ultralcd.cpp:1705
->>>>>>> v3.10.0-RC1
-=======
 # MSG_MMU_POWER_FAILS c=15
-#: ultralcd.cpp:1514
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1515
 msgid "MMU power fails"
 msgstr "MMU Netzfehler"
 
@@ -1577,17 +815,8 @@ msgstr "Auto Leist"
 msgid "High power"
 msgstr "Hohe leist"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:2179
-=======
-#: ultralcd.cpp:2130
->>>>>>> v3.10.0-RC1
-=======
 # MSG_MMU_CONNECTED c=18
-#: ultralcd.cpp:1939
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1942
 msgid "MMU2 connected"
 msgstr "MMU2 verbunden"
 
@@ -1596,87 +825,33 @@ msgstr "MMU2 verbunden"
 msgid "Motor"
 msgstr ""
 
-<<<<<<< HEAD
-# MSG_MOVE_AXIS
-<<<<<<< HEAD
-#: ultralcd.cpp:5779
-=======
-#: ultralcd.cpp:5783
->>>>>>> v3.10.0-RC1
-msgid "Move axis"
-msgstr "Achse bewegen"
-
-# MSG_MOVE_X
-<<<<<<< HEAD
-#: ultralcd.cpp:4369
-=======
-#: ultralcd.cpp:4334
->>>>>>> v3.10.0-RC1
-msgid "Move X"
-msgstr "Bewege X"
-
-# MSG_MOVE_Y
-<<<<<<< HEAD
-#: ultralcd.cpp:4370
-=======
-#: ultralcd.cpp:4335
->>>>>>> v3.10.0-RC1
-msgid "Move Y"
-msgstr "Bewege Y"
-
-# MSG_MOVE_Z
-<<<<<<< HEAD
-#: ultralcd.cpp:4371
-=======
-#: ultralcd.cpp:4336
->>>>>>> v3.10.0-RC1
-msgid "Move Z"
-msgstr "Bewege Z"
-
-# MSG_NO_MOVE
-<<<<<<< HEAD
-#: Marlin_main.cpp:5574
-=======
-#: Marlin_main.cpp:5720
->>>>>>> v3.10.0-RC1
-msgid "No move."
-msgstr "Keine Bewegung."
-
-# MSG_NO_CARD
-<<<<<<< HEAD
-#: ultralcd.cpp:6955
-=======
-#: ultralcd.cpp:6802
->>>>>>> v3.10.0-RC1
-=======
 # MSG_MOVE_AXIS c=18
-#: ultralcd.cpp:5598
+#: ultralcd.cpp:5612
 msgid "Move axis"
 msgstr "Achse bewegen"
 
 # MSG_MOVE_X c=18
-#: ultralcd.cpp:4154
+#: ultralcd.cpp:4168
 msgid "Move X"
 msgstr "Bewege X"
 
 # MSG_MOVE_Y c=18
-#: ultralcd.cpp:4155
+#: ultralcd.cpp:4169
 msgid "Move Y"
 msgstr "Bewege Y"
 
 # MSG_MOVE_Z c=18
-#: ultralcd.cpp:4156
+#: ultralcd.cpp:4170
 msgid "Move Z"
 msgstr "Bewege Z"
 
 # MSG_NO_MOVE c=20
-#: Marlin_main.cpp:5722
+#: Marlin_main.cpp:5745
 msgid "No move."
 msgstr "Keine Bewegung."
 
 # MSG_NO_CARD c=18
-#: ultralcd.cpp:6618
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:6638
 msgid "No SD card"
 msgstr "Keine SD Karte"
 
@@ -1690,17 +865,8 @@ msgstr "N/V"
 msgid "No"
 msgstr "Nein"
 
-<<<<<<< HEAD
-# MSG_SELFTEST_NOTCONNECTED
-<<<<<<< HEAD
-#: ultralcd.cpp:8324
-=======
-#: ultralcd.cpp:8145
->>>>>>> v3.10.0-RC1
-=======
 # MSG_SELFTEST_NOTCONNECTED c=20
-#: ultralcd.cpp:8068
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8089
 msgid "Not connected"
 msgstr "Nicht angeschlossen"
 
@@ -1715,28 +881,12 @@ msgid "Not spinning"
 msgstr "Dreht sich nicht"
 
 # MSG_WIZARD_V2_CAL c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:4954
-=======
-#: ultralcd.cpp:4946
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4759
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4773
 msgid "Now I will calibrate distance between tip of the nozzle and heatbed surface."
 msgstr "Jetzt werde ich den Abstand zwischen Duesenspitze und Druckbett kalibrieren."
 
 # MSG_WIZARD_WILL_PREHEAT c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5079
-=======
-#: ultralcd.cpp:5075
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4888
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4902
 msgid "Now I will preheat nozzle for PLA."
 msgstr "Jetzt werde ich die Duese fuer PLA vorheizen."
 
@@ -1745,97 +895,38 @@ msgstr "Jetzt werde ich die Duese fuer PLA vorheizen."
 msgid "Nozzle"
 msgstr "Duese"
 
-<<<<<<< HEAD
-# MSG_DEFAULT_SETTINGS_LOADED c=20 r=5
-<<<<<<< HEAD
-#: Marlin_main.cpp:1535
-=======
-#: Marlin_main.cpp:1564
->>>>>>> v3.10.0-RC1
-msgid "Old settings found. Default PID, Esteps etc. will be set."
-msgstr "Alte Einstellungen gefunden. Standard PID, E-Steps u.s.w. werden gesetzt."
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:5070
-=======
-#: ultralcd.cpp:5066
->>>>>>> v3.10.0-RC1
-msgid "Now remove the test print from steel sheet."
-msgstr "Testdruck jetzt von Stahlblech entfernen."
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:1655
-msgid "Nozzle FAN"
-msgstr "Duesevent."
-
-# MSG_PAUSE_PRINT
-#: ultralcd.cpp:6919
-=======
-#: ultralcd.cpp:1634
-=======
 # MSG_DEFAULT_SETTINGS_LOADED c=20 r=6
-#: Marlin_main.cpp:1541
+#: Marlin_main.cpp:1545
 msgid "Old settings found. Default PID, Esteps etc. will be set."
 msgstr "Alte Einstellungen gefunden. Standard PID, E-Steps u.s.w. werden gesetzt."
 
 # MSG_REMOVE_TEST_PRINT c=20 r=4
-#: ultralcd.cpp:4879
+#: ultralcd.cpp:4893
 msgid "Now remove the test print from steel sheet."
 msgstr "Testdruck jetzt von Stahlblech entfernen."
 
 # MSG_NOZZLE_FAN c=10
-#: ultralcd.cpp:1443
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1444
 msgid "Nozzle FAN"
 msgstr "Duesevent."
 
 # MSG_PAUSE_PRINT c=18
 #: messages.c:74
->>>>>>> v3.10.0-RC1
 msgid "Pause print"
 msgstr "Druck pausieren"
 
-<<<<<<< HEAD
-# MSG_PID_RUNNING c=20 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:1540
-=======
-#: ultralcd.cpp:1514
->>>>>>> v3.10.0-RC1
-msgid "PID cal.           "
-msgstr "PID Kal.           "
-
-# MSG_PID_FINISHED c=20 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:1546
-=======
-#: ultralcd.cpp:1520
->>>>>>> v3.10.0-RC1
-msgid "PID cal. finished"
-msgstr "PID Kalib. fertig"
-
-# MSG_PID_EXTRUDER c=17 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:5902
-=======
-#: ultralcd.cpp:5905
->>>>>>> v3.10.0-RC1
-=======
 # MSG_PID_RUNNING c=20
-#: ultralcd.cpp:1323
+#: ultralcd.cpp:1324
 msgid "PID cal."
 msgstr "PID Kal."
 
 # MSG_PID_FINISHED c=20
-#: ultralcd.cpp:1329
+#: ultralcd.cpp:1330
 msgid "PID cal. finished"
 msgstr "PID Kalib. fertig"
 
 # MSG_PID_EXTRUDER c=17
-#: ultralcd.cpp:5720
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5734
 msgid "PID calibration"
 msgstr "PID Kalibrierung"
 
@@ -1850,15 +941,7 @@ msgid "Place a sheet of paper under the nozzle during the calibration of first 4
 msgstr "Legen Sie ein Blatt Papier unter die Duese waehrend der Kalibrierung der ersten 4 Punkte. Wenn die Duese das Papier erfasst, den Drucker sofort ausschalten."
 
 # MSG_WIZARD_CLEAN_HEATBED c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5136
-=======
-#: ultralcd.cpp:5132
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4945
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4959
 msgid "Please clean heatbed and then press the knob."
 msgstr "Bitte reinigen Sie das Heizbett und druecken Sie dann den Knopf."
 
@@ -1867,19 +950,9 @@ msgstr "Bitte reinigen Sie das Heizbett und druecken Sie dann den Knopf."
 msgid "Please clean the nozzle for calibration. Click when done."
 msgstr "Bitte entfernen Sie ueberstehendes Filament von der Duese. Klicken wenn sauber."
 
-<<<<<<< HEAD
-# MSG_SELFTEST_PLEASECHECK
-<<<<<<< HEAD
-#: ultralcd.cpp:8316
-=======
-#: ultralcd.cpp:8139
->>>>>>> v3.10.0-RC1
-msgid "Please check :"
-=======
 # MSG_SELFTEST_PLEASECHECK c=20
-#: ultralcd.cpp:8062
+#: ultralcd.cpp:8083
 msgid "Please check:"
->>>>>>> upstream/MK3_3.10.0
 msgstr "Bitte pruefe:"
 
 # MSG_WIZARD_CALIBRATION_FAILED c=20 r=8
@@ -1887,17 +960,8 @@ msgstr "Bitte pruefe:"
 msgid "Please check our handbook and fix the problem. Then resume the Wizard by rebooting the printer."
 msgstr "Bitte lesen Sie unser Handbuch und beheben Sie das Problem. Fahren Sie dann mit dem Assistenten fort, indem Sie den Drucker neu starten."
 
-<<<<<<< HEAD
-# MSG_CHECK_IDLER c=20 r=4
-<<<<<<< HEAD
-#: Marlin_main.cpp:3163
-=======
-#: Marlin_main.cpp:3301
->>>>>>> v3.10.0-RC1
-=======
 # MSG_CHECK_IDLER c=20 r=5
-#: Marlin_main.cpp:3689
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:3704
 msgid "Please open idler and remove filament manually."
 msgstr "Bitte Spannrolle oeffnen und Fila- ment von Hand entfernen"
 
@@ -1917,11 +981,7 @@ msgid "Please pull out filament immediately"
 msgstr "Bitte ziehen Sie das Filament sofort heraus"
 
 # MSG_EJECT_REMOVE c=20 r=4
-<<<<<<< HEAD
-#: mmu.cpp:1441
-=======
-#: mmu.cpp:1420
->>>>>>> v3.10.0-RC1
+#: mmu.cpp:1439
 msgid "Please remove filament and then press the knob."
 msgstr "Bitte Filament entfernen und dann den Knopf druecken"
 
@@ -1931,24 +991,12 @@ msgid "Please remove steel sheet from heatbed."
 msgstr "Bitte entfernen Sie das Stahlblech vom Heizbett."
 
 # MSG_RUN_XYZ c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: Marlin_main.cpp:4620
-=======
-#: Marlin_main.cpp:4817
->>>>>>> v3.10.0-RC1
-=======
-#: Marlin_main.cpp:5208
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:5231
 msgid "Please run XYZ calibration first."
 msgstr "Bitte zuerst XYZ Kalibrierung ausfuehren."
 
 # MSG_UPDATE_MMU2_FW c=20 r=4
-<<<<<<< HEAD
-#: mmu.cpp:1360
-=======
-#: mmu.cpp:1340
->>>>>>> v3.10.0-RC1
+#: mmu.cpp:1359
 msgid "Please update firmware in your MMU2. Waiting for reset."
 msgstr "Bitte aktualisieren Sie die Firmware in der MMU2. Warte auf Reset."
 
@@ -1957,17 +1005,8 @@ msgstr "Bitte aktualisieren Sie die Firmware in der MMU2. Warte auf Reset."
 msgid "Please wait"
 msgstr "Bitte warten"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:5069
-=======
-#: ultralcd.cpp:5065
->>>>>>> v3.10.0-RC1
-=======
 # MSG_REMOVE_SHIPPING_HELPERS c=20 r=3
-#: ultralcd.cpp:4878
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4892
 msgid "Please remove shipping helpers first."
 msgstr "Bitte zuerst Transportsicherungen entfernen."
 
@@ -1976,17 +1015,8 @@ msgstr "Bitte zuerst Transportsicherungen entfernen."
 msgid "Preheat the nozzle!"
 msgstr "Duese vorheizen!"
 
-<<<<<<< HEAD
-# MSG_PREHEAT
-<<<<<<< HEAD
-#: ultralcd.cpp:6897
-=======
-#: ultralcd.cpp:6760
->>>>>>> v3.10.0-RC1
-=======
 # MSG_PREHEAT c=18
-#: ultralcd.cpp:6576
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:6596
 msgid "Preheat"
 msgstr "Vorheizen"
 
@@ -1995,36 +1025,14 @@ msgstr "Vorheizen"
 msgid "Preheating nozzle. Please wait."
 msgstr "Vorheizen der Duese. Bitte warten."
 
-<<<<<<< HEAD
-#  c=14
-<<<<<<< HEAD
-#: ultralcd.cpp:1960
-=======
-#: ultralcd.cpp:1918
->>>>>>> v3.10.0-RC1
-msgid "PINDA"
-msgstr ""
-
-# 
-=======
 # MSG_NEW_FIRMWARE_PLEASE_UPGRADE c=20
->>>>>>> upstream/MK3_3.10.0
 #: util.cpp:298
 msgid "Please upgrade."
 msgstr "Bitte aktualisieren."
 
 # MSG_PRESS_TO_PREHEAT c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: Marlin_main.cpp:11575
-msgid "Press knob to preheat nozzle and continue."
-=======
-#: Marlin_main.cpp:11761
-=======
-#: Marlin_main.cpp:11789
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:11818
 msgid "Press the knob to preheat nozzle and continue."
->>>>>>> v3.10.0-RC1
 msgstr "Bitte druecken Sie den Knopf um die Duese vorzuheizen und fortzufahren."
 
 # MSG_FS_PAUSE c=5
@@ -2032,13 +1040,8 @@ msgstr "Bitte druecken Sie den Knopf um die Duese vorzuheizen und fortzufahren."
 msgid "Pause"
 msgstr ""
 
-<<<<<<< HEAD
-# 
-#: ultralcd.cpp:1784
-=======
 # MSG_POWER_FAILURES c=15
 #: messages.c:77
->>>>>>> v3.10.0-RC1
 msgid "Power failures"
 msgstr "Netzfehler"
 
@@ -2047,44 +1050,18 @@ msgstr "Netzfehler"
 msgid "Print aborted"
 msgstr "Druck abgebrochen"
 
-<<<<<<< HEAD
-#  c=20
-<<<<<<< HEAD
-#: ultralcd.cpp:2436
-=======
-#: ultralcd.cpp:2410
->>>>>>> v3.10.0-RC1
-msgid "Preheating to load"
-msgstr "Heizen zum Laden"
-
-#  c=20
-<<<<<<< HEAD
-#: ultralcd.cpp:2440
-=======
-#: ultralcd.cpp:2415
->>>>>>> v3.10.0-RC1
-=======
 # MSG_PREHEATING_TO_LOAD c=20
-#: ultralcd.cpp:2220
+#: ultralcd.cpp:2223
 msgid "Preheating to load"
 msgstr "Heizen zum Laden"
 
 # MSG_PREHEATING_TO_UNLOAD c=20
-#: ultralcd.cpp:2225
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2228
 msgid "Preheating to unload"
 msgstr "Heizen zum Entladen"
 
 # MSG_SELFTEST_PRINT_FAN_SPEED c=18
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:8729
-=======
-#: ultralcd.cpp:8518
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:8441
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8462
 msgid "Print fan:"
 msgstr "Druckvent.:"
 
@@ -2093,32 +1070,13 @@ msgstr "Druckvent.:"
 msgid "Print from SD"
 msgstr "Drucken von SD"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-# 
-#: ultralcd.cpp:2283
-=======
-#  c=20
-#: ultralcd.cpp:2251
->>>>>>> v3.10.0-RC1
-msgid "Press the knob"
-msgstr "Knopf druecken zum"
-
-# MSG_PRINT_PAUSED c=20 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:1119
-=======
-#: ultralcd.cpp:1094
->>>>>>> v3.10.0-RC1
-=======
 # MSG_PRESS_KNOB c=20
-#: ultralcd.cpp:2060
+#: ultralcd.cpp:2063
 msgid "Press the knob"
 msgstr "Knopf druecken zum"
 
 # MSG_PRINT_PAUSED c=20
-#: ultralcd.cpp:903
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:904
 msgid "Print paused"
 msgstr "Druck pausiert"
 
@@ -2132,162 +1090,53 @@ msgstr "Druecken Sie den Knopf um die Duesentemperatur wiederherzustellen"
 msgid "Printer has not been calibrated yet. Please follow the manual, chapter First steps, section Calibration flow."
 msgstr "Drucker wurde noch nicht kalibriert. Bitte folgen Sie dem Handbuch, Kapitel Erste Schritte, Abschnitt Kalibrie- rungsablauf."
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:1656
-=======
-#: ultralcd.cpp:1635
->>>>>>> v3.10.0-RC1
-msgid "Print FAN"
-msgstr "Druckvent."
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4934
-=======
-#: ultralcd.cpp:4926
->>>>>>> v3.10.0-RC1
-msgid "Please insert filament into the extruder, then press the knob to load it."
-msgstr "Bitte legen Sie das Filament in den Extruder ein und druecken Sie dann den Knopf, um es zu laden."
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4929
-=======
-#: ultralcd.cpp:4921
->>>>>>> v3.10.0-RC1
-msgid "Please insert filament into the first tube of the MMU, then press the knob to load it."
-msgstr "Bitte stecken Sie das Filament in den ersten Schlauch der MMU und druecken Sie dann den Knopf, um es zu laden."
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4851
-=======
-#: ultralcd.cpp:4843
->>>>>>> v3.10.0-RC1
-msgid "Please load filament first."
-msgstr "Bitte laden Sie zuerst das Filament."
-
-# MSG_PRUSA3D
-<<<<<<< HEAD
-#: ultralcd.cpp:2159
-=======
-#: ultralcd.cpp:2110
->>>>>>> v3.10.0-RC1
-msgid "prusa3d.com"
-msgstr ""
-
-# MSG_BED_CORRECTION_REAR c=14 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:3268
-=======
-#: ultralcd.cpp:3218
->>>>>>> v3.10.0-RC1
-msgid "Rear side [um]"
-msgstr "Hinten [um]"
-
-#  c=20 r=4
-<<<<<<< HEAD
-#: ultralcd.cpp:7595
-=======
-#: ultralcd.cpp:7421
->>>>>>> v3.10.0-RC1
-msgid "Please unload the filament first, then repeat this action."
-msgstr "Bitte entladen Sie erst das Filament und versuchen Sie es nochmal."
-
-#  c=20 r=4
-<<<<<<< HEAD
-#: ultralcd.cpp:7598
-=======
-#: ultralcd.cpp:7424
->>>>>>> v3.10.0-RC1
-=======
 # MSG_PRINT_FAN c=10
-#: ultralcd.cpp:1444
+#: ultralcd.cpp:1445
 msgid "Print FAN"
 msgstr "Druckvent."
 
 # MSG_WIZARD_LOAD_FILAMENT c=20 r=6
-#: ultralcd.cpp:4739
+#: ultralcd.cpp:4753
 msgid "Please insert filament into the extruder, then press the knob to load it."
 msgstr "Bitte legen Sie das Filament in den Extruder ein und druecken Sie dann den Knopf, um es zu laden."
 
 # MSG_MMU_INSERT_FILAMENT_FIRST_TUBE c=20 r=6
-#: ultralcd.cpp:4734
+#: ultralcd.cpp:4748
 msgid "Please insert filament into the first tube of the MMU, then press the knob to load it."
 msgstr "Bitte stecken Sie das Filament in den ersten Schlauch der MMU und druecken Sie dann den Knopf, um es zu laden."
 
 # MSG_PLEASE_LOAD_PLA c=20 r=4
-#: ultralcd.cpp:4656
+#: ultralcd.cpp:4670
 msgid "Please load filament first."
 msgstr "Bitte laden Sie zuerst das Filament."
 
 # MSG_BED_CORRECTION_REAR c=14
-#: ultralcd.cpp:3038
+#: ultralcd.cpp:3041
 msgid "Rear side [um]"
 msgstr "Hinten [um]"
 
 # MSG_UNLOAD_FILAMENT_REPEAT c=20 r=4
-#: ultralcd.cpp:7344
+#: ultralcd.cpp:7364
 msgid "Please unload the filament first, then repeat this action."
 msgstr "Bitte entladen Sie erst das Filament und versuchen Sie es nochmal."
 
 # MSG_CHECK_IR_CONNECTION c=20 r=4
-#: ultralcd.cpp:7347
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:7367
 msgid "Please check the IR sensor connection, unload filament if present."
 msgstr "Bitte IR Sensor Verbindungen ueber- pruefen und Filament entladen ist."
 
 # MSG_RECOVERING_PRINT c=20
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: Marlin_main.cpp:10932
-=======
-#: Marlin_main.cpp:11118
->>>>>>> v3.10.0-RC1
-msgid "Recovering print    "
-msgstr "Druck wiederherst   "
-=======
-#: Marlin_main.cpp:11133
+#: Marlin_main.cpp:11162
 msgid "Recovering print"
 msgstr "Druck wiederherst"
->>>>>>> upstream/MK3_3.10.0
 
 # MSG_REMOVE_OLD_FILAMENT c=20 r=5
-<<<<<<< HEAD
-#: mmu.cpp:852
-=======
-#: mmu.cpp:832
->>>>>>> v3.10.0-RC1
+#: mmu.cpp:851
 msgid "Remove old filament and press the knob to start loading new filament."
 msgstr "Entfernen Sie das alte Filament und druecken Sie den Knopf, um das neue zu laden."
 
-<<<<<<< HEAD
-#  c=20
-#: 
-msgid "Prusa i3 MK3S OK."
-msgstr ""
-
-# MSG_CALIBRATE_BED_RESET
-<<<<<<< HEAD
-#: ultralcd.cpp:5907
-msgid "Reset XYZ calibr."
-msgstr "Reset XYZ Kalibr."
-
-# MSG_BED_CORRECTION_RESET
-#: ultralcd.cpp:3269
-msgid "Reset"
-msgstr "Ruecksetzen"
-
-# MSG_RESUME_PRINT
-#: ultralcd.cpp:6905
-=======
-#: ultralcd.cpp:5910
-=======
 # MSG_CALIBRATE_BED_RESET c=18
-#: ultralcd.cpp:5725
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5739
 msgid "Reset XYZ calibr."
 msgstr "Reset XYZ Kalibr."
 
@@ -2298,7 +1147,6 @@ msgstr "Ruecksetzen"
 
 # MSG_RESUME_PRINT c=18
 #: messages.c:86
->>>>>>> v3.10.0-RC1
 msgid "Resume print"
 msgstr "Druck fortsetzen"
 
@@ -2307,17 +1155,8 @@ msgstr "Druck fortsetzen"
 msgid "Resuming print"
 msgstr "Druck fortgesetzt"
 
-<<<<<<< HEAD
-# MSG_BED_CORRECTION_RIGHT c=14 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:3266
-=======
-#: ultralcd.cpp:3216
->>>>>>> v3.10.0-RC1
-=======
 # MSG_BED_CORRECTION_RIGHT c=14
-#: ultralcd.cpp:3036
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3039
 msgid "Right side[um]"
 msgstr "Rechts [um]"
 
@@ -2327,15 +1166,7 @@ msgid "RPi port"
 msgstr ""
 
 # MSG_WIZARD_RERUN c=20 r=7
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:4872
-=======
-#: ultralcd.cpp:4864
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:4677
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4691
 msgid "Running Wizard will delete current calibration results and start from the beginning. Continue?"
 msgstr "Der Assistent wird die aktuellen Kalibrierungsdaten loeschen und von vorne beginnen. Weiterfahren?"
 
@@ -2344,22 +1175,8 @@ msgstr "Der Assistent wird die aktuellen Kalibrierungsdaten loeschen und von vor
 msgid "SD card"
 msgstr "SD Karte"
 
-<<<<<<< HEAD
-# MSG_TOSHIBA_FLASH_AIR_COMPATIBILITY
-#: messages.c:142
-msgid "FlashAir"
-msgstr ""
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:2995
-=======
-#: ultralcd.cpp:2947
->>>>>>> v3.10.0-RC1
-=======
 # MSG_RIGHT c=10
-#: ultralcd.cpp:2766
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2769
 msgid "Right"
 msgstr "Rechts"
 
@@ -2368,123 +1185,48 @@ msgstr "Rechts"
 msgid "Searching bed calibration point"
 msgstr "Suche Bett Kalibrierpunkt"
 
-<<<<<<< HEAD
-# MSG_LANGUAGE_SELECT
-<<<<<<< HEAD
-#: ultralcd.cpp:5819
-=======
-#: ultralcd.cpp:4559
->>>>>>> v3.10.0-RC1
-msgid "Select language"
-msgstr "Waehle Sprache"
-
-# MSG_SELFTEST_OK
-<<<<<<< HEAD
-#: ultralcd.cpp:7870
-=======
-#: ultralcd.cpp:7696
->>>>>>> v3.10.0-RC1
-=======
 # MSG_LANGUAGE_SELECT c=18
-#: ultralcd.cpp:4372
+#: ultralcd.cpp:4386
 msgid "Select language"
 msgstr "Waehle Sprache"
 
 # MSG_SELFTEST_OK c=20
-#: ultralcd.cpp:7619
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:7639
 msgid "Self test OK"
 msgstr "Selbsttest OK"
 
 # MSG_SELFTEST_START c=20
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:7638
-=======
-#: ultralcd.cpp:7464
->>>>>>> v3.10.0-RC1
-msgid "Self test start  "
-msgstr "Selbsttest start "
-
-# MSG_SELFTEST
-<<<<<<< HEAD
-#: ultralcd.cpp:5883
-=======
-#: ultralcd.cpp:5886
->>>>>>> v3.10.0-RC1
-msgid "Selftest         "
-msgstr "Selbsttest       "
-
-# MSG_SELFTEST_ERROR
-<<<<<<< HEAD
-#: ultralcd.cpp:8314
-=======
-#: ultralcd.cpp:8138
->>>>>>> v3.10.0-RC1
-msgid "Selftest error !"
-=======
-#: ultralcd.cpp:7387
+#: ultralcd.cpp:7407
 msgid "Self test start"
 msgstr "Selbsttest start"
 
 # MSG_SELFTEST c=18
-#: ultralcd.cpp:5701
+#: ultralcd.cpp:5715
 msgid "Selftest"
 msgstr "Selbsttest"
 
 # MSG_SELFTEST_ERROR c=20
-#: ultralcd.cpp:8061
+#: ultralcd.cpp:8082
 msgid "Selftest error!"
->>>>>>> upstream/MK3_3.10.0
 msgstr "Selbsttest Fehler!"
 
 # MSG_SELFTEST_FAILED c=20
 #: messages.c:90
-<<<<<<< HEAD
-msgid "Selftest failed  "
-msgstr "Selbsttest misslang "
-
-# MSG_FORCE_SELFTEST c=20 r=8
-<<<<<<< HEAD
-#: Marlin_main.cpp:1567
-=======
-#: Marlin_main.cpp:1596
->>>>>>> v3.10.0-RC1
-msgid "Selftest will be run to calibrate accurate sensorless rehoming."
-msgstr "Selbsttest im Gang, um die genaue Rueck- kehr zum Nullpunkt ohne Sensor zu kalibrieren"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:5110
-=======
-#: ultralcd.cpp:5106
->>>>>>> v3.10.0-RC1
-msgid "Select nozzle preheat temperature which matches your material."
-msgstr "Bitte Vorheiztemperatur auswaehlen, die Ihrem Material entspricht."
-
-# MSG_SET_TEMPERATURE c=19 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:3287
-=======
-#: ultralcd.cpp:3236
->>>>>>> v3.10.0-RC1
-=======
 msgid "Selftest failed"
-msgstr "Selbsttest Error"
+msgstr "Selbsttest misslang"
 
 # MSG_FORCE_SELFTEST c=20 r=8
-#: Marlin_main.cpp:1573
+#: Marlin_main.cpp:1577
 msgid "Selftest will be run to calibrate accurate sensorless rehoming."
 msgstr "Selbsttest im Gang, um die genaue Rueck- kehr zum Nullpunkt ohne Sensor zu kalibrieren"
 
 # MSG_SEL_PREHEAT_TEMP c=20 r=6
-#: ultralcd.cpp:4919
+#: ultralcd.cpp:4933
 msgid "Select nozzle preheat temperature which matches your material."
 msgstr "Bitte Vorheiztemperatur auswaehlen, die Ihrem Material entspricht."
 
 # MSG_SET_TEMPERATURE c=20
-#: ultralcd.cpp:3056
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3059
 msgid "Set temperature:"
 msgstr "Temp. einstellen:"
 
@@ -2494,30 +1236,10 @@ msgid "Settings"
 msgstr "Einstellungen"
 
 # MSG_SHOW_END_STOPS c=18
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5904
-=======
-#: ultralcd.cpp:5907
->>>>>>> v3.10.0-RC1
+#: ultralcd.cpp:5736
 msgid "Show end stops"
 msgstr "Endschalter Status"
 
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4016
-=======
-#: ultralcd.cpp:3949
->>>>>>> v3.10.0-RC1
-msgid "Sensor state"
-msgstr "Sensorstatus"
-
-=======
-#: ultralcd.cpp:5722
-msgid "Show end stops"
-msgstr "Endschalter Status"
-
->>>>>>> upstream/MK3_3.10.0
 # MSG_FILE_CNT c=20 r=6
 #: cardreader.cpp:825
 msgid "Some files will not be sorted. Max. No. of files in 1 folder for sorting is 100."
@@ -2538,21 +1260,10 @@ msgstr "Ohne"
 msgid "Time"
 msgstr "Zeit"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:3038
-=======
-#: ultralcd.cpp:2990
->>>>>>> v3.10.0-RC1
-msgid "Severe skew:"
-msgstr "Sehr schraeg:"
-=======
 # MSG_SEVERE_SKEW c=14
-#: ultralcd.cpp:2809
+#: ultralcd.cpp:2812
 msgid "Severe skew"
-msgstr "Sehr Schraeg"
->>>>>>> upstream/MK3_3.10.0
+msgstr "Sehr schraeg"
 
 # MSG_SORT_ALPHA c=8
 #: messages.c:141
@@ -2569,52 +1280,23 @@ msgstr "Sortiere Dateien"
 msgid "Loud"
 msgstr "Laut"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:3037
-=======
-#: ultralcd.cpp:2989
->>>>>>> v3.10.0-RC1
-msgid "Slight skew:"
-msgstr "Etwas schraeg:"
-=======
 # MSG_SLIGHT_SKEW c=14
-#: ultralcd.cpp:2808
+#: ultralcd.cpp:2811
 msgid "Slight skew"
-msgstr "Leicht Schraeg"
->>>>>>> upstream/MK3_3.10.0
+msgstr "Leicht schraeg"
 
 # MSG_SOUND c=7
 #: messages.c:143
 msgid "Sound"
 msgstr "Ton"
 
-<<<<<<< HEAD
-#  c=7
-<<<<<<< HEAD
-#: ultralcd.cpp:1823
-=======
-#: ultralcd.cpp:1781
->>>>>>> v3.10.0-RC1
-=======
 # MSG_RUNOUTS c=7
-#: ultralcd.cpp:1590
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1591
 msgid "Runouts"
 msgstr "Maengel"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: Marlin_main.cpp:5134
-=======
-#: Marlin_main.cpp:5331
->>>>>>> v3.10.0-RC1
-=======
 # MSG_Z-LEVELING_ENFORCED c=20 r=4
-#: Marlin_main.cpp:3196
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:3211
 msgid "Some problem encountered, Z-leveling enforced ..."
 msgstr "Fehler aufgetreten, Z-Kalibrierung erforderlich..."
 
@@ -2623,17 +1305,8 @@ msgstr "Fehler aufgetreten, Z-Kalibrierung erforderlich..."
 msgid "Once"
 msgstr "Einmal"
 
-<<<<<<< HEAD
-# MSG_SPEED
-<<<<<<< HEAD
-#: ultralcd.cpp:7163
-=======
-#: ultralcd.cpp:6993
->>>>>>> v3.10.0-RC1
-=======
 # MSG_SPEED c=15
-#: ultralcd.cpp:6809
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:6829
 msgid "Speed"
 msgstr "Geschwindigkeit"
 
@@ -2643,33 +1316,14 @@ msgid "Spinning"
 msgstr "Dreht sich"
 
 # MSG_TEMP_CAL_WARNING c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: Marlin_main.cpp:4633
-=======
-#: Marlin_main.cpp:4830
->>>>>>> v3.10.0-RC1
-msgid "Stable ambient temperature 21-26C is needed a rigid stand is required."
-msgstr "Stabile Umgebungs- temperatur 21-26C und feste Stand- flaeche erforderlich"
-
-# MSG_STATISTICS
-<<<<<<< HEAD
-#: ultralcd.cpp:7022
-=======
-#: ultralcd.cpp:6852
->>>>>>> v3.10.0-RC1
-msgid "Statistics  "
-msgstr "Statistiken "
-=======
-#: Marlin_main.cpp:5221
+#: Marlin_main.cpp:5244
 msgid "Stable ambient temperature 21-26C is needed a rigid stand is required."
 msgstr "Stabile Umgebungs- temperatur 21-26C und feste Stand- flaeche erforderlich"
 
 # MSG_STATISTICS c=18
-#: ultralcd.cpp:6002
+#: ultralcd.cpp:6016
 msgid "Statistics"
 msgstr "Statistiken"
->>>>>>> upstream/MK3_3.10.0
 
 # MSG_STOP_PRINT c=18
 #: messages.c:110
@@ -2681,45 +1335,18 @@ msgstr "Druck abbrechen"
 msgid "STOPPED."
 msgstr "GESTOPPT."
 
-<<<<<<< HEAD
-# MSG_SUPPORT
-<<<<<<< HEAD
-#: ultralcd.cpp:7031
-=======
-#: ultralcd.cpp:6861
->>>>>>> v3.10.0-RC1
-msgid "Support"
-msgstr ""
-
-# MSG_SELFTEST_SWAPPED
-<<<<<<< HEAD
-#: ultralcd.cpp:8394
-=======
-#: ultralcd.cpp:8197
->>>>>>> v3.10.0-RC1
-msgid "Swapped"
-msgstr "Ausgetauscht"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4822
-=======
-#: ultralcd.cpp:4814
->>>>>>> v3.10.0-RC1
-=======
 # MSG_SUPPORT c=18
-#: ultralcd.cpp:6677
+#: ultralcd.cpp:6697
 msgid "Support"
 msgstr ""
 
 # MSG_SELFTEST_SWAPPED c=16
-#: ultralcd.cpp:8120
+#: ultralcd.cpp:8141
 msgid "Swapped"
 msgstr "Ausgetauscht"
 
 # MSG_SELECT_FILAMENT c=20
-#: ultralcd.cpp:4627
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:4641
 msgid "Select filament:"
 msgstr "Filament auswaehlen:"
 
@@ -2728,44 +1355,18 @@ msgstr "Filament auswaehlen:"
 msgid "Temp. cal."
 msgstr "Temp Kalib."
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4963
-=======
-#: ultralcd.cpp:4955
->>>>>>> v3.10.0-RC1
-msgid "Select temperature which matches your material."
-msgstr "Waehlen Sie die Temperatur, die zu Ihrem Material passt."
-
-# MSG_CALIBRATION_PINDA_MENU c=17 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:5915
-=======
-#: ultralcd.cpp:5918
->>>>>>> v3.10.0-RC1
-=======
 # MSG_SELECT_TEMP_MATCHES_MATERIAL c=20 r=4
-#: ultralcd.cpp:4768
+#: ultralcd.cpp:4782
 msgid "Select temperature which matches your material."
 msgstr "Waehlen Sie die Temperatur, die zu Ihrem Material passt."
 
 # MSG_CALIBRATION_PINDA_MENU c=17
-#: ultralcd.cpp:5733
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5747
 msgid "Temp. calibration"
 msgstr "Temp. kalibrieren"
 
 # MSG_TEMP_CAL_FAILED c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3942
-=======
-#: ultralcd.cpp:3872
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3692
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3706
 msgid "Temperature calibration failed"
 msgstr "Temperaturkalibrierung fehlgeschlagen"
 
@@ -2774,45 +1375,18 @@ msgstr "Temperaturkalibrierung fehlgeschlagen"
 msgid "Temperature calibration is finished and active. Temp. calibration can be disabled in menu Settings->Temp. cal."
 msgstr "Temp.kalibrierung ist fertig + aktiv. Temp.kalibrierung kann ausgeschaltet werden im Menu Einstellungen -> Temp.kal."
 
-<<<<<<< HEAD
-#  c=20 r=3
-<<<<<<< HEAD
-#: ultralcd.cpp:7602
-=======
-#: ultralcd.cpp:7428
->>>>>>> v3.10.0-RC1
-msgid "Sensor verified, remove the filament now."
-msgstr "Sensor ueberprueft, entladen Sie jetzt das Filament."
-
-# MSG_TEMPERATURE
-<<<<<<< HEAD
-#: ultralcd.cpp:5777
-=======
-#: ultralcd.cpp:5781
->>>>>>> v3.10.0-RC1
-msgid "Temperature"
-msgstr "Temperatur"
-
-# MSG_MENU_TEMPERATURES c=15 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:2211
-=======
-#: ultralcd.cpp:2180
->>>>>>> v3.10.0-RC1
-=======
 # MSG_FS_VERIFIED c=20 r=3
-#: ultralcd.cpp:7351
+#: ultralcd.cpp:7371
 msgid "Sensor verified, remove the filament now."
 msgstr "Sensor ueberprueft, entladen Sie jetzt das Filament."
 
 # MSG_TEMPERATURE c=18
-#: ultralcd.cpp:5594
+#: ultralcd.cpp:5608
 msgid "Temperature"
 msgstr "Temperatur"
 
 # MSG_MENU_TEMPERATURES c=15
-#: ultralcd.cpp:1989
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1992
 msgid "Temperatures"
 msgstr "Temperaturen"
 
@@ -2821,93 +1395,33 @@ msgstr "Temperaturen"
 msgid "There is still a need to make Z calibration. Please follow the manual, chapter First steps, section Calibration flow."
 msgstr "Es ist noch not- wendig die Z- Kalibrierung aus- zufuehren. Bitte befolgen Sie das Handbuch, Kapitel Erste Schritte, Abschnitt Kalibrierablauf."
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:2892
-=======
-#: ultralcd.cpp:2844
->>>>>>> v3.10.0-RC1
-msgid "Total filament"
-msgstr "Gesamtes Filament"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:2893
-=======
-#: ultralcd.cpp:2845
->>>>>>> v3.10.0-RC1
-msgid "Total print time"
-msgstr "Gesamte Druckzeit"
-
-# MSG_TUNE
-<<<<<<< HEAD
-#: ultralcd.cpp:6894
-=======
-#: ultralcd.cpp:6758
->>>>>>> v3.10.0-RC1
-msgid "Tune"
-msgstr "Feineinstellung"
-
-# 
-#: 
-msgid "Unload"
-msgstr "Entladen"
-
-<<<<<<< HEAD
-# 
-#: ultralcd.cpp:1753
-=======
-=======
 # MSG_TOTAL_FILAMENT c=19
-#: ultralcd.cpp:2656
+#: ultralcd.cpp:2659
 msgid "Total filament"
 msgstr "Gesamtes Filament"
 
 # MSG_TOTAL_PRINT_TIME c=19
-#: ultralcd.cpp:2657
+#: ultralcd.cpp:2660
 msgid "Total print time"
 msgstr "Gesamte Druckzeit"
 
 # MSG_TUNE c=18
-#: ultralcd.cpp:6574
+#: ultralcd.cpp:6594
 msgid "Tune"
 msgstr "Feineinstellung"
 
->>>>>>> upstream/MK3_3.10.0
 # MSG_TOTAL_FAILURES c=20
 #: messages.c:101
->>>>>>> v3.10.0-RC1
 msgid "Total failures"
 msgstr "Fehler Total"
 
-<<<<<<< HEAD
-# 
-#: ultralcd.cpp:2290
-msgid "to load filament"
-msgstr "Filament laden"
-
-<<<<<<< HEAD
-# 
-#: ultralcd.cpp:2294
-=======
-#  c=20
-#: ultralcd.cpp:2258
-msgid "to load filament"
-msgstr "Filament laden"
-
-#  c=20
-#: ultralcd.cpp:2262
->>>>>>> v3.10.0-RC1
-=======
 # MSG_TO_LOAD_FIL c=20
-#: ultralcd.cpp:2067
+#: ultralcd.cpp:2070
 msgid "to load filament"
 msgstr "Filament laden"
 
 # MSG_TO_UNLOAD_FIL c=20
-#: ultralcd.cpp:2071
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2074
 msgid "to unload filament"
 msgstr "um Filament entladen"
 
@@ -2921,148 +1435,58 @@ msgstr "Fil. entladen"
 msgid "Unloading filament"
 msgstr "Filament auswerfen"
 
-<<<<<<< HEAD
-# 
-#: ultralcd.cpp:1706
-=======
 # MSG_TOTAL c=6
 #: messages.c:100
->>>>>>> v3.10.0-RC1
 msgid "Total"
 msgstr "Gesamt"
 
-<<<<<<< HEAD
-# MSG_USED c=19 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:6044
-=======
-#: ultralcd.cpp:6034
->>>>>>> v3.10.0-RC1
-msgid "Used during print"
-msgstr "Beim Druck benutzt"
-
-# MSG_MENU_VOLTAGES c=15 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:2214
-=======
-#: ultralcd.cpp:2183
->>>>>>> v3.10.0-RC1
-msgid "Voltages"
-msgstr "Spannungen"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:2187
-=======
-#: ultralcd.cpp:2138
->>>>>>> v3.10.0-RC1
-msgid "unknown"
-msgstr "unbekannt"
-
-# MSG_USERWAIT
-<<<<<<< HEAD
-#: Marlin_main.cpp:5544
-=======
-#: Marlin_main.cpp:3834
->>>>>>> v3.10.0-RC1
-msgid "Wait for user..."
-msgstr "Warte auf Benutzer.."
-
-# MSG_WAITING_TEMP c=20 r=3
-<<<<<<< HEAD
-#: ultralcd.cpp:3435
-=======
-#: ultralcd.cpp:3384
->>>>>>> v3.10.0-RC1
-=======
 # MSG_USED c=19
-#: ultralcd.cpp:5849
+#: ultralcd.cpp:5863
 msgid "Used during print"
 msgstr "Beim Druck benutzt"
 
 # MSG_MENU_VOLTAGES c=15
-#: ultralcd.cpp:1992
+#: ultralcd.cpp:1995
 msgid "Voltages"
 msgstr "Spannungen"
 
 # MSG_UNKNOWN c=13
-#: ultralcd.cpp:1947
+#: ultralcd.cpp:1950
 msgid "unknown"
 msgstr "unbekannt"
 
 # MSG_USERWAIT c=20
-#: Marlin_main.cpp:4223
+#: Marlin_main.cpp:4246
 msgid "Wait for user..."
 msgstr "Warte auf Benutzer.."
 
 # MSG_WAITING_TEMP c=20 r=4
-#: ultralcd.cpp:3204
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3207
 msgid "Waiting for nozzle and bed cooling"
 msgstr "Warten bis Heizung und Bett abgekuehlt sind"
 
 # MSG_WAITING_TEMP_PINDA c=20 r=3
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3396
-=======
-#: ultralcd.cpp:3345
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3165
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3168
 msgid "Waiting for PINDA probe cooling"
 msgstr "Warten, bis PINDA- Sonde abgekuehlt ist"
 
 # MSG_CHANGED_BOTH c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: Marlin_main.cpp:1527
-=======
-#: Marlin_main.cpp:1556
->>>>>>> v3.10.0-RC1
-=======
-#: Marlin_main.cpp:1533
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:1537
 msgid "Warning: both printer type and motherboard type changed."
 msgstr "Warnung: Druckertyp und Platinentyp wurden beide geaendert."
 
 # MSG_CHANGED_MOTHERBOARD c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: Marlin_main.cpp:1519
-=======
-#: Marlin_main.cpp:1548
->>>>>>> v3.10.0-RC1
-=======
-#: Marlin_main.cpp:1525
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:1529
 msgid "Warning: motherboard type changed."
 msgstr "Warnung: Platinentyp wurde geaendert."
 
 # MSG_CHANGED_PRINTER c=20 r=4
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: Marlin_main.cpp:1523
-=======
-#: Marlin_main.cpp:1552
->>>>>>> v3.10.0-RC1
-=======
-#: Marlin_main.cpp:1529
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:1533
 msgid "Warning: printer type changed."
 msgstr "Warnung: Druckertyp wurde geaendert."
 
 # MSG_UNLOAD_SUCCESSFUL c=20 r=2
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: Marlin_main.cpp:3153
-=======
-#: Marlin_main.cpp:3292
->>>>>>> v3.10.0-RC1
-=======
-#: Marlin_main.cpp:3680
->>>>>>> upstream/MK3_3.10.0
+#: Marlin_main.cpp:3695
 msgid "Was filament unload successful?"
 msgstr "Konnten Sie das Filament entnehmen?"
 
@@ -3071,30 +1495,13 @@ msgstr "Konnten Sie das Filament entnehmen?"
 msgid "Wiring error"
 msgstr "Verdrahtungsfehler"
 
-<<<<<<< HEAD
-# MSG_WIZARD c=17 r=1
-<<<<<<< HEAD
-#: ultralcd.cpp:5874
-=======
-#: ultralcd.cpp:5877
->>>>>>> v3.10.0-RC1
-=======
 # MSG_WIZARD c=17
-#: ultralcd.cpp:5692
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5706
 msgid "Wizard"
 msgstr "Assistent"
 
 # MSG_XYZ_DETAILS c=18
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:2203
-=======
-#: ultralcd.cpp:2172
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:1981
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1984
 msgid "XYZ cal. details"
 msgstr "XYZ Kal. Details"
 
@@ -3114,28 +1521,12 @@ msgid "You can always resume the Wizard from Calibration -> Wizard."
 msgstr "Sie koennen den Assistenten immer im Menu neu starten: Kalibrierung -> Assistent"
 
 # MSG_BED_SKEW_OFFSET_DETECTION_SKEW_EXTREME c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3914
-=======
-#: ultralcd.cpp:3844
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3664
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3678
 msgid "XYZ calibration all right. Skew will be corrected automatically."
 msgstr "XYZ Kalibrierung in Ordnung. Schraeglauf wird automatisch korrigiert."
 
 # MSG_BED_SKEW_OFFSET_DETECTION_SKEW_MILD c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3911
-=======
-#: ultralcd.cpp:3841
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3661
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3675
 msgid "XYZ calibration all right. X/Y axes are slightly skewed. Good job!"
 msgstr "XYZ Kalibrierung in Ordnung. X/Y Achsen sind etwas schraeg. Gut gemacht!"
 
@@ -3145,164 +1536,62 @@ msgid "Timeout"
 msgstr "Verzoegerung"
 
 # MSG_X_CORRECTION c=13
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5198
-=======
-#: ultralcd.cpp:5194
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:5007
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5021
 msgid "X-correct:"
 msgstr "X-Korrektur:"
 
 # MSG_BED_SKEW_OFFSET_DETECTION_PERFECT c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3908
-=======
-#: ultralcd.cpp:3838
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3658
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3672
 msgid "XYZ calibration ok. X/Y axes are perpendicular. Congratulations!"
 msgstr "XYZ-Kalibrierung ok. X/Y-Achsen sind senkrecht zueinander Glueckwunsch!"
 
 # MSG_BED_SKEW_OFFSET_DETECTION_WARNING_FRONT_BOTH_FAR c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3892
-=======
-#: ultralcd.cpp:3822
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3642
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3656
 msgid "XYZ calibration compromised. Front calibration points not reachable."
 msgstr "XYZ-Kalibrierung beeintraechtigt. Vordere Kalibrierpunkte nicht erreichbar."
 
 # MSG_BED_SKEW_OFFSET_DETECTION_WARNING_FRONT_RIGHT_FAR c=20 r=8
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:3895
-=======
-#: ultralcd.cpp:3825
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:3645
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:3659
 msgid "XYZ calibration compromised. Right front calibration point not reachable."
 msgstr "XYZ-Kalibrierung beeintraechtigt. Rechter vorderer Kalibrierpunkt nicht erreichbar."
 
 # MSG_LOAD_ALL c=17
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:6304
-=======
-#: ultralcd.cpp:6273
->>>>>>> v3.10.0-RC1
-msgid "Load all"
-msgstr "Alle laden"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:3874
-=======
-#: ultralcd.cpp:3804
->>>>>>> v3.10.0-RC1
-msgid "XYZ calibration failed. Bed calibration point was not found."
-msgstr "XYZ-Kalibrierung fehlgeschlagen. Bett-Kalibrierpunkt nicht gefunden."
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:3880
-=======
-#: ultralcd.cpp:3810
->>>>>>> v3.10.0-RC1
-msgid "XYZ calibration failed. Front calibration points not reachable."
-msgstr "XYZ-Kalibrierung fehlgeschlagen. Vordere Kalibrierpunkte nicht erreichbar."
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:3883
-=======
-#: ultralcd.cpp:3813
->>>>>>> v3.10.0-RC1
-msgid "XYZ calibration failed. Right front calibration point not reachable."
-msgstr "XYZ-Kalibrierung fehlgeschlagen. Rechter vorderer Kalibrierpunkt ist nicht erreichbar."
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:2992
-=======
-#: ultralcd.cpp:2944
->>>>>>> v3.10.0-RC1
-msgid "Y distance from min"
-msgstr "Y Entfernung vom Min"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4966
-=======
-#: ultralcd.cpp:4958
->>>>>>> v3.10.0-RC1
-msgid "The printer will start printing a zig-zag line. Rotate the knob until you reach the optimal height. Check the pictures in the handbook (Calibration chapter)."
-msgstr "Der Drucker beginnt mit dem Drucken einer Zickzacklinie. Drehen Sie den Knopf, bis Sie die optimale Hoehe erreicht haben. Ueberpruefen Sie die Bilder im Handbuch (Kapitel Kalibrierung)."
-
-#  c=20 r=5
-<<<<<<< HEAD
-#: ultralcd.cpp:7606
-=======
-#: ultralcd.cpp:7432
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:6088
+#: ultralcd.cpp:6102
 msgid "Load all"
 msgstr "Alle laden"
 
 # MSG_BED_SKEW_OFFSET_DETECTION_POINT_NOT_FOUND c=20 r=6
-#: ultralcd.cpp:3624
+#: ultralcd.cpp:3638
 msgid "XYZ calibration failed. Bed calibration point was not found."
 msgstr "XYZ-Kalibrierung fehlgeschlagen. Bett-Kalibrierpunkt nicht gefunden."
 
 # MSG_BED_SKEW_OFFSET_DETECTION_FAILED_FRONT_BOTH_FAR c=20 r=6
-#: ultralcd.cpp:3630
+#: ultralcd.cpp:3644
 msgid "XYZ calibration failed. Front calibration points not reachable."
 msgstr "XYZ-Kalibrierung fehlgeschlagen. Vordere Kalibrierpunkte nicht erreichbar."
 
 # MSG_BED_SKEW_OFFSET_DETECTION_FAILED_FRONT_RIGHT_FAR c=20 r=6
-#: ultralcd.cpp:3633
+#: ultralcd.cpp:3647
 msgid "XYZ calibration failed. Right front calibration point not reachable."
 msgstr "XYZ-Kalibrierung fehlgeschlagen. Rechter vorderer Kalibrierpunkt ist nicht erreichbar."
 
 # MSG_Y_DIST_FROM_MIN c=20
-#: ultralcd.cpp:2763
+#: ultralcd.cpp:2766
 msgid "Y distance from min"
 msgstr "Y Entfernung vom Min"
 
 # MSG_WIZARD_V2_CAL_2 c=20 r=12
-#: ultralcd.cpp:4771
+#: ultralcd.cpp:4785
 msgid "The printer will start printing a zig-zag line. Rotate the knob until you reach the optimal height. Check the pictures in the handbook (Calibration chapter)."
 msgstr "Der Drucker beginnt mit dem Drucken einer Zickzacklinie. Drehen Sie den Knopf, bis Sie die optimale Hoehe erreicht haben. Ueberpruefen Sie die Bilder im Handbuch (Kapitel Kalibrierung)."
 
 # MSG_FIL_FAILED c=20 r=5
-#: ultralcd.cpp:7355
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:7375
 msgid "Verification failed, remove the filament and try again."
 msgstr "Ueberpruefung fehl- geschlagen, entladen Sie das Filament und versuchen Sie es erneut."
 
 # MSG_Y_CORRECTION c=13
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5199
-=======
-#: ultralcd.cpp:5195
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:5008
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5022
 msgid "Y-correct:"
 msgstr "Y-Korrektur:"
 
@@ -3321,55 +1610,18 @@ msgstr "An"
 msgid "Back"
 msgstr "Zurueck"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:5754
-=======
-#: ultralcd.cpp:5749
->>>>>>> v3.10.0-RC1
-msgid "Checks"
-msgstr "Kontrolle"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:8408
-=======
-#: ultralcd.cpp:8207
->>>>>>> v3.10.0-RC1
-msgid "False triggering"
-msgstr "Falschtriggerung"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4021
-=======
-#: 
->>>>>>> v3.10.0-RC1
-msgid "FINDA:"
-msgstr ""
-
-# MSG_FIRMWARE
-#: language.h:24
-msgid "Firmware"
-msgstr ""
-
-# MSG_STRICT
-#: messages.c:133
-=======
 # MSG_CHECKS c=18
-#: ultralcd.cpp:5562
+#: ultralcd.cpp:5576
 msgid "Checks"
 msgstr "Kontrolle"
 
 # MSG_FALSE_TRIGGERING c=20
-#: ultralcd.cpp:8130
+#: ultralcd.cpp:8151
 msgid "False triggering"
 msgstr "Falschtriggerung"
 
 # MSG_STRICT c=8
 #: messages.c:131
->>>>>>> upstream/MK3_3.10.0
 msgid "Strict"
 msgstr "Strikt"
 
@@ -3383,22 +1635,8 @@ msgstr "Warnen"
 msgid "HW Setup"
 msgstr "HW Einstellungen"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4025
-=======
-#: 
->>>>>>> v3.10.0-RC1
-msgid "IR:"
-msgstr ""
-
-# MSG_MAGNETS_COMP
-#: messages.c:154
-=======
 # MSG_MAGNETS_COMP c=13
 #: messages.c:150
->>>>>>> upstream/MK3_3.10.0
 msgid "Magnets comp."
 msgstr "Magnet Komp."
 
@@ -3407,22 +1645,8 @@ msgstr "Magnet Komp."
 msgid "Mesh"
 msgstr "Gitter"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:5801
-msgid "Mesh bed leveling"
-msgstr "MeshBett Ausgleich"
-
-# 
-#: Marlin_main.cpp:877
-=======
-#: Marlin_main.cpp:892
->>>>>>> v3.10.0-RC1
-=======
 # MSG_MK3S_FIRMWARE_ON_MK3 c=20 r=4
 #: Marlin_main.cpp:869
->>>>>>> upstream/MK3_3.10.0
 msgid "MK3S firmware detected on MK3 printer"
 msgstr "MK3S-Firmware auf MK3-Drucker erkannt"
 
@@ -3431,19 +1655,9 @@ msgstr "MK3S-Firmware auf MK3-Drucker erkannt"
 msgid "MMU Mode"
 msgstr "MMU Mod."
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4502
-=======
-#: ultralcd.cpp:4467
->>>>>>> v3.10.0-RC1
-msgid "Mode change in progress ..."
-=======
 # MSG_MODE_CHANGE_IN_PROGRESS c=20 r=3
-#: ultralcd.cpp:4287
+#: ultralcd.cpp:4301
 msgid "Mode change in progress..."
->>>>>>> upstream/MK3_3.10.0
 msgstr "Moduswechsel erfolgt..."
 
 # MSG_MODEL c=8
@@ -3486,40 +1700,13 @@ msgstr "G-Code ist fuer eine neuere Firmware geslict. Fortfahren?"
 msgid "G-code sliced for a newer firmware. Please update the firmware. Print cancelled."
 msgstr "G-Code ist fuer eine neuere Firmware geslict. Bitte die Firmware updaten. Druck abgebrochen."
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:4017
-=======
-#: 
->>>>>>> v3.10.0-RC1
-msgid "PINDA:"
-msgstr ""
-
-#  c=20
-<<<<<<< HEAD
-#: ultralcd.cpp:2446
-=======
-#: ultralcd.cpp:2422
->>>>>>> v3.10.0-RC1
-msgid "Preheating to cut"
-msgstr "Heizen zum Schnitt"
-
-#  c=20
-<<<<<<< HEAD
-#: ultralcd.cpp:2443
-=======
-#: ultralcd.cpp:2419
->>>>>>> v3.10.0-RC1
-=======
 # MSG_PREHEATING_TO_CUT c=20
-#: ultralcd.cpp:2232
+#: ultralcd.cpp:2235
 msgid "Preheating to cut"
 msgstr "Heizen zum Schnitt"
 
 # MSG_PREHEATING_TO_EJECT c=20
-#: ultralcd.cpp:2229
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:2232
 msgid "Preheating to eject"
 msgstr "Heizen zum Auswurf"
 
@@ -3533,59 +1720,23 @@ msgstr "Der Durchmesser der Druckerduese weicht vom G-Code ab. Fortfahren?"
 msgid "Printer nozzle diameter differs from the G-code. Please check the value in settings. Print cancelled."
 msgstr "Der Durchmesser der Druckerduese weicht vom G-Code ab. Bitte ueberpruefen Sie den Wert in den Einstellungen. Druck abgebrochen."
 
-<<<<<<< HEAD
-#  c=20
-<<<<<<< HEAD
-#: ultralcd.cpp:8414
-=======
-#: ultralcd.cpp:8212
->>>>>>> v3.10.0-RC1
-=======
 # MSG_SELFTEST_FS_LEVEL c=20
-#: ultralcd.cpp:8135
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:8156
 msgid "%s level expected"
 msgstr "%s Level erwartet"
 
-<<<<<<< HEAD
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:6858
-=======
-#: ultralcd.cpp:6684
->>>>>>> v3.10.0-RC1
-msgid "Rename"
-msgstr "Umbenennen"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:6851
-=======
-#: ultralcd.cpp:6677
->>>>>>> v3.10.0-RC1
-msgid "Select"
-msgstr "Auswahl"
-
-# 
-<<<<<<< HEAD
-#: ultralcd.cpp:2205
-=======
-#: ultralcd.cpp:2174
->>>>>>> v3.10.0-RC1
-=======
 # MSG_RENAME c=18
-#: ultralcd.cpp:6500
+#: ultralcd.cpp:6520
 msgid "Rename"
 msgstr "Umbenennen"
 
 # MSG_SELECT c=18
-#: ultralcd.cpp:6493
+#: ultralcd.cpp:6513
 msgid "Select"
 msgstr "Auswahl"
 
 # MSG_INFO_SENSORS c=18
-#: ultralcd.cpp:1983
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:1986
 msgid "Sensor info"
 msgstr "Sensor Info"
 
@@ -3599,30 +1750,13 @@ msgstr "Stahlblech"
 msgid "Assist"
 msgstr "Assist."
 
-<<<<<<< HEAD
-#  c=18
-#: ultralcd.cpp:5752
-=======
 # MSG_STEEL_SHEET c=18
-<<<<<<< HEAD
-#: messages.c:65
->>>>>>> v3.10.0-RC1
-=======
 #: messages.c:66
->>>>>>> upstream/MK3_3.10.0
 msgid "Steel sheets"
 msgstr "Stahlbleche"
 
 # MSG_Z_CORRECTION c=13
-<<<<<<< HEAD
-<<<<<<< HEAD
-#: ultralcd.cpp:5200
-=======
-#: ultralcd.cpp:5196
->>>>>>> v3.10.0-RC1
-=======
-#: ultralcd.cpp:5009
->>>>>>> upstream/MK3_3.10.0
+#: ultralcd.cpp:5023
 msgid "Z-correct:"
 msgstr "Z-Korrektur:"
 
