@@ -14,12 +14,18 @@
 #                                     BMH  = Bondetch Extruder for Prusa with Mosquito and Slice Hight temp Thermistor
 #                                     BMM  = Bondtech Extruder for Prusa with Mosquito Magnum Hotend
 #                                     BMMH = Bondetch Extruder for Prusa with Mosquito Magnum and Slice Hight temp Thermistor
+#                                     LGX  = Bondtech LGX Extruder for Prusa with copperfield
+#                                     LGXH = Bondtech LGX Extruder for Prusa with copperfield and Slice Hight temp Thermistor
+#                                     LM   = Bondtech LGX Extruder for Prusa with Mosquito Hotend
+#                                     LMH  = Bondtech LGX Extruder for Prusa with Mosquito and Slice Hight temp Thermistor
+#                                     LMM  = Bondtech LGX Extruder for Prusa with Mosquito Magnum Hotend
+#                                     LMMH = Bondtech LGX Extruder for Prusa with Mosquito Magnum and Slice Hight temp Thermistor
 # TypesArray is an array of printer types
 # HeightsArray is an array of printer hights
 # ModArray is an array of printer mods
 #
 #
-# Version 1.0.14
+# Version 1.0.15
 ################################################################################
 # 3 Jul 2019, vertigo235, Inital varaiants script
 # 8 Aug 2019, 3d-gussner, Modified for Caribou needs
@@ -38,6 +44,7 @@
 # 02 Sep 2020, 3d-gussner, Fix OLED display also for Prusa printers
 # 09 Sep 2020, 3d-gussner, Rebranding Caribou and new naming convention
 # 11 Sep 2020, 3d-gussner, Change EXTRUDER_ALTFAN_SPEED_SILENT speed
+# 09 May 2021, 3d-gussner, Add Bondtech LGX support
 ################################################################################
 
 # Constants
@@ -53,6 +60,7 @@ BOARD="EINSy10a"
 HEIGHT=210
 BASE="1_75mm_$TYPE-$BOARD-E3Dv6full.h"
 BMGHeightDiff=-3 #Bondtech extruders are bit higher than stock one
+LGXHeightDiff=6 #Bondtech LGX is shorter than Prusa extruder
 
 # Arrays
 declare -a CompanyArray=( "Caribou" "Prusa" )
@@ -374,3 +382,60 @@ for COMPANY in ${CompanyArray[@]}; do
 done
 echo "End $COMPANY BMMH"
 
+echo "Start $COMPANY LGXC"
+MOD="LGXC" ##Bondtech LGX Extruder with Copperhead hotend for MK3S
+declare -a LGXArray=( "MK3S" )
+for COMPANY in ${CompanyArray[@]}; do
+	for TYPE in ${LGXArray[@]}; do
+		echo "Type: $TYPE Mod: $MOD"
+		if [ "$TYPE" == "MK3S" ]; then
+			BOARD="EINSy10a"
+		else
+			echo "Unsupported controller"
+			exit 1
+		fi
+		if [ $COMPANY == "Caribou" ]; then
+			declare -a HeightsArray=( 220 320 420)
+		elif [ $COMPANY == "Prusa" ]; then
+			declare -a HeightsArray=( 210 )
+		fi
+		for HEIGHT in ${HeightsArray[@]}; do
+			BASE="$COMPANY$HEIGHT-$TYPE.h"
+			VARIANT="$COMPANY$HEIGHT-$TYPE-$MOD.h"
+			LGXHEIGHT=$(( $HEIGHT + $LGXHeightDiff ))
+			#echo $BASE
+			#echo $TYPE
+			#echo $HEIGHT
+			#echo $LGXHEIGHT
+			echo $VARIANT
+			# Modify printer name
+			cp ${BASE} ${VARIANT}
+			sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'"/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			# Disable Extruder_Design_R3 for Caribou
+			sed -i -e "s/^#define EXTRUDER_DESIGN_R3*/\/\/#define EXTRUDER_DESIGN_R3/g" ${VARIANT}
+            # Enable LXG
+			sed -i -e "s/\/\/#define BONDTECH_LGX*/#define BONDTECH_LGX/g" ${VARIANT}
+			# Printer Height
+			sed -i -e "s/^#define Z_MAX_POS ${HEIGHT}*/#define Z_MAX_POS ${LGXHEIGHT}/g" ${VARIANT}
+			if [ "$TYPE" == "MK3S" ]; then
+				# E Steps for MK3 and MK3S with Bondetch extruder
+				sed -i -e 's/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,280}*/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,410}/' ${VARIANT}
+            fi
+			sed -i -e 's/#define TMC2130_USTEPS_E    32*/#define TMC2130_USTEPS_E    16/' ${VARIANT}
+			# Filament Load Distances (BPE gears are farther from the hotend)
+			sed -i -e 's/#define LOAD_FILAMENT_1 "G1 E70 F400"*/#define LOAD_FILAMENT_1 "G1 E80 F400"/' ${VARIANT}
+			sed -i -e 's/#define UNLOAD_FILAMENT_1 "G1 E-80 F7000"*/#define UNLOAD_FILAMENT_1 "G1 E-30 F7000"/' ${VARIANT}
+			sed -i -e 's/#define FILAMENTCHANGE_FINALRETRACT -80*/#define FILAMENTCHANGE_FINALRETRACT -40/' ${VARIANT}
+			sed -i -e 's/#define FILAMENTCHANGE_FIRSTFEED 70*/#define FILAMENTCHANGE_FIRSTFEED 5/' ${VARIANT}
+			sed -i -e 's/#define FILAMENTCHANGE_FINALFEED 25*/#define FILAMENTCHANGE_FINALFEED 20/' ${VARIANT}
+			# Display Type 
+			sed -i -e "s/\/\/#define WEH002004_OLED*/#define WEH002004_OLED/g" ${VARIANT}
+			# Enable Bondtech E3d MMU settings
+			sed -i -e "s/\/\/#define BONDTECH_MK3S*/#define BONDTECH_MK3S/g" ${VARIANT}
+            # LGX PINDA xy offset
+            sed -i -e "s/#define X_PROBE_OFFSET_FROM_EXTRUDER 23*/#define X_PROBE_OFFSET_FROM_EXTRUDER 22.25/g" ${VARIANT}
+            sed -i -e "s/#define Y_PROBE_OFFSET_FROM_EXTRUDER 5*/#define Y_PROBE_OFFSET_FROM_EXTRUDER 11.5/g" ${VARIANT}
+		done
+	done
+done
+echo "End $COMPANY LGXC"
