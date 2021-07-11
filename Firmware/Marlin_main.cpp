@@ -2240,9 +2240,10 @@ bool calibrate_z_auto()
 	else {
 		current_position[Z_AXIS] = Z_MAX_POS + 9.0;
 	}
-	#elif BONDTECH_LGXC
-	   current_position[Z_AXIS] = Z_MAX_POS + 4.0;
-	#else
+	#else 
+     #ifdef BONDTECH_LGXC
+	  current_position[Z_AXIS] = Z_MAX_POS + 4.0;
+     #endif
 	if ((PRINTER_TYPE == PRINTER_MK3S) || (PRINTER_TYPE == PRINTER_MK3) || (PRINTER_TYPE == PRINTER_MK25S)) {
 		current_position[Z_AXIS] = Z_MAX_POS + 2.0;
 	}
