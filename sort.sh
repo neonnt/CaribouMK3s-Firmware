@@ -18,93 +18,114 @@
 # 17 May 2020, 3d-gussner, Sorting of stock Prusa + OLED was missing thanks to @n4mb3r0n3
 # 09 Sep 2020, 3d-gussner, Rebranding Caribou3d
 # 10 Sep 2020, 3d-gussner, fix some sorting issues due to new naming convention
+# 11 Jul 2021, wschadow, added LGX, added folders for Prusa and Caribou extruders
 #
 # Folder tree:
 #.
 #├── Caribou220
 #│   ├── MK25
-#│   │   └── BONDTECH
-#│   │       ├── E3DV6
-#│   │       ├── MOSQUITO
-#│   │       └── MOSQUITO_MAGNUM
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Caribou
 #│   ├── MK25S
-#│   │   └── BONDTECH
-#│   │       ├── E3DV6
-#│   │       ├── MOSQUITO
-#│   │       └── MOSQUITO_MAGNUM
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Caribou
 #│   ├── MK3
-#│   │   └── BONDTECH
-#│   │       ├── E3DV6
-#│   │       ├── MOSQUITO
-#│   │       └── MOSQUITO_MAGNUM
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Caribou
 #│   └── MK3S
-#│       └── BONDTECH
-#│           ├── E3DV6
-#│           ├── MOSQUITO
-#│           └── MOSQUITO_MAGNUM
+#│       │── BONDTECH
+#│       │    ├── E3DV6
+#│       │    ├── MOSQUITO
+#│       │    └── MOSQUITO_MAGNUM
+#│       │── Caribou
+#│       └── LGX
 #├── Caribou320
 #│   ├── MK25
-#│   │   └── BONDTECH
-#│   │       ├── E3DV6
-#│   │       ├── MOSQUITO
-#│   │       └── MOSQUITO_MAGNUM
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Caribou
 #│   ├── MK25S
-#│   │   └── BONDTECH
-#│   │       ├── E3DV6
-#│   │       ├── MOSQUITO
-#│   │       └── MOSQUITO_MAGNUM
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Caribou
 #│   ├── MK3
-#│   │   └── BONDTECH
-#│   │       ├── E3DV6
-#│   │       ├── MOSQUITO
-#│   │       └── MOSQUITO_MAGNUM
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Caribou
 #│   └── MK3S
-#│       └── BONDTECH
-#│           ├── E3DV6
-#│           ├── MOSQUITO
-#│           └── MOSQUITO_MAGNUM
+#│       │── BONDTECH
+#│       │    ├── E3DV6
+#│       │    ├── MOSQUITO
+#│       │    └── MOSQUITO_MAGNUM
+#│       │── Caribou
+#│       └── LGX
 #├── Caribou420
 #│   ├── MK25
-#│   │   └── BONDTECH
-#│   │       ├── E3DV6
-#│   │       ├── MOSQUITO
-#│   │       └── MOSQUITO_MAGNUM
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Caribou
 #│   ├── MK25S
-#│   │   └── BONDTECH
-#│   │       ├── E3DV6
-#│   │       ├── MOSQUITO
-#│   │       └── MOSQUITO_MAGNUM
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Caribou
 #│   ├── MK3
-#│   │   └── BONDTECH
-#│   │       ├── E3DV6
-#│   │       ├── MOSQUITO
-#│   │       └── MOSQUITO_MAGNUM
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Caribou
 #│   └── MK3S
-#│       └── BONDTECH
-#│           ├── E3DV6
-#│           ├── MOSQUITO
-#│           └── MOSQUITO_MAGNUM
+#│       │── BONDTECH
+#│       │    ├── E3DV6
+#│       │    ├── MOSQUITO
+#│       │    └── MOSQUITO_MAGNUM
+#│       │── Caribou
+#│       └── LGX
 #└── Prusa210
-#    ├── MK25
-#    │   └── BONDTECH
-#    │       ├── E3DV6
-#    │       ├── MOSQUITO
-#    │       └── MOSQUITO_MAGNUM
-#    ├── MK25S
-#    │   └── BONDTECH
-#    │       ├── E3DV6
-#    │       ├── MOSQUITO
-#    │       └── MOSQUITO_MAGNUM
-#    ├── MK3
-#    │   └── BONDTECH
-#    │       ├── E3DV6
-#    │       ├── MOSQUITO
-#    │       └── MOSQUITO_MAGNUM
-#    └── MK3S
-#        └── BONDTECH
-#            ├── E3DV6
-#            ├── MOSQUITO
-#            └── MOSQUITO_MAGNUM
+#│   ├── MK25
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Prusa
+#│   ├── MK25S
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Prusa
+#│   ├── MK3
+#│   │   │── BONDTECH
+#│   │   │   ├── E3DV6
+#│   │   │   ├── MOSQUITO
+#│   │   │   └── MOSQUITO_MAGNUM
+#│   │   └── Prusa
+#│   └── MK3S
+#│       │── BONDTECH
+#│       │    ├── E3DV6
+#│       │    ├── MOSQUITO
+#│       │    └── MOSQUITO_MAGNUM
+#│       │── Prusa
+#│       └── LGX
 #
 # Set arrays for script
 # Array of companies
@@ -176,9 +197,15 @@ for COMPANY in ${CompanyArray[@]}; do
 				# Find other Bondtech hex files and copy them to destination folder sorted By Type, Height and Bontech txpe.
 				# BONDTECH_SHORT2 -> Bondtech folder name
 				find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-$BONDTECH_SHORT2-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/BONDTECH/$BONDTECH_TYPE \;
-				# Find rest hex files and copy them to destination folder sorted by Type and Height
-				find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGHT/$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE \;
 			done
+			if [ $TYPE == "MK3S" ]; then
+			    # Find all LGXC files and copy them to the destination folder
+			    mkdir -p $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXC
+			    find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-LGXC-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXC \;
+			fi
+			# Find rest hex files and copy them to destination folder sorted by Type and Height
+		    mkdir -p $Destination_Path/$COMPANY$HEIGHT/$TYPE/$COMPANY
+			find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGHT/$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/$COMPANY \;
 		done
 	done
 done
