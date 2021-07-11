@@ -15,11 +15,8 @@
 #                                     BMM  = Bondtech Extruder for Prusa with Mosquito Magnum Hotend
 #                                     BMMH = Bondetch Extruder for Prusa with Mosquito Magnum and Slice Hight temp Thermistor
 #                                     LGX  = Bondtech LGX Extruder for Prusa with copperfield
-#                                     LGXH = Bondtech LGX Extruder for Prusa with copperfield and Slice Hight temp Thermistor
 #                                     LM   = Bondtech LGX Extruder for Prusa with Mosquito Hotend
-#                                     LMH  = Bondtech LGX Extruder for Prusa with Mosquito and Slice Hight temp Thermistor
 #                                     LMM  = Bondtech LGX Extruder for Prusa with Mosquito Magnum Hotend
-#                                     LMMH = Bondtech LGX Extruder for Prusa with Mosquito Magnum and Slice Hight temp Thermistor
 # TypesArray is an array of printer types
 # HeightsArray is an array of printer hights
 # ModArray is an array of printer mods
@@ -74,7 +71,7 @@ ls Caribou*
 ls Prusa*
 echo " "
 echo "Existing Caribou varaiants will be deleted. Press CRTL+C to stop"
-sleep 5
+sleep 1
 rm Caribou*
 rm Prusa*
 
@@ -143,6 +140,7 @@ echo "End $COMPANY"
 echo "Start $COMPANY BE"
 MOD="BE" ##Bondtech Prusa Edition Extruder for MK25/MK25S/MK3/MK3S
 for COMPANY in ${CompanyArray[@]}; do
+	echo $COMPANY
 	for TYPE in ${TypesArray[@]}; do
 		echo "Type: $TYPE Mod: $MOD"
 		if [[ "$TYPE" == "MK3" || "$TYPE" == "MK3S" ]]; then
@@ -167,9 +165,20 @@ for COMPANY in ${CompanyArray[@]}; do
 			#echo $HEIGHT
 			#echo $BMGHEIGHT
 			echo $VARIANT
-			# Modify printer name
 			cp ${BASE} ${VARIANT}
-			sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			# Modify printer name
+			if [ $COMPANY == "Caribou" ]; then
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			else
+				if [ $TYPE == "MK25" ]; then
+					PRUSA_TYPE="MK2.5"
+				elif [ $TYPE == "MK25S" ]; then
+					PRUSA_TYPE="MK2.5S"
+				else
+					PRUSA_TYPE=$TYPE
+				fi
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "Prusa i3 '$PRUSA_TYPE'"*/#define CUSTOM_MENDEL_NAME "Prusa i3 '$TYPE'-'$MOD'"/g' ${VARIANT}
+			fi
 			# Enable Extruder_Design_R3 for Caribou
 			sed -i -e "s/\/\/#define EXTRUDER_DESIGN_R3*/#define EXTRUDER_DESIGN_R3/g" ${VARIANT}
 			# Printer Height
@@ -197,6 +206,7 @@ for COMPANY in ${CompanyArray[@]}; do
 	done
 done
 echo "End $COMPANY BE"
+
 
 echo "Start $COMPANY BM"
 BASE_MOD=BE
@@ -227,7 +237,12 @@ for COMPANY in ${CompanyArray[@]}; do
 			echo $VARIANT
 			cp ${BASE} ${VARIANT}
 			# Modify printer name
-			sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			if [ $COMPANY == "Caribou" ]; then
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			else
+				PRUSA_TYPE=$TYPE
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "Prusa i3 '$PRUSA_TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "Prusa i3 '$TYPE'-'$MOD'"/g' ${VARIANT}
+			fi
 			# Hotend Type 
 			sed -i -e 's/#define NOZZLE_TYPE "E3Dv6full"*/#define NOZZLE_TYPE "Mosquito"/' ${VARIANT}
 			# Enable Bondtech Mosquito MMU settings
@@ -267,7 +282,12 @@ for COMPANY in ${CompanyArray[@]}; do
 			echo $VARIANT
 			cp ${BASE} ${VARIANT}
 			# Modify printer name
-			sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			if [ $COMPANY == "Caribou" ]; then
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			else
+				PRUSA_TYPE=$TYPE
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "Prusa i3 '$PRUSA_TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "Prusa i3 '$TYPE'-'$MOD'"/g' ${VARIANT}
+			fi
 			# Enable Slice High Temperature Thermistor
 			sed -i -e "s/\/\/#define SLICE_HT_EXTRUDER*/#define SLICE_HT_EXTRUDER/g" ${VARIANT}
 			# Change mintemp for Slice High Temperature Thermistor
@@ -333,7 +353,12 @@ for COMPANY in ${CompanyArray[@]}; do
 			echo $VARIANT
 			cp ${BASE} ${VARIANT}
 			# Modify printer name
-			sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			if [ $COMPANY == "Caribou" ]; then
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			else
+				PRUSA_TYPE=$TYPE
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "Prusa i3 '$PRUSA_TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "Prusa i3 '$TYPE'-'$MOD'"/g' ${VARIANT}
+			fi
 			# Hotend Type 
 			sed -i -e 's/#define NOZZLE_TYPE "Mosquito"*/#define NOZZLE_TYPE "Mosquito Magnum"/' ${VARIANT}
 			# Enable Bondtech Mosquito MMU settings
@@ -372,7 +397,13 @@ for COMPANY in ${CompanyArray[@]}; do
 			#echo $HEIGHT
 			echo $VARIANT
 			cp ${BASE} ${VARIANT}
-			sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			# Modify printer name
+			if [ $COMPANY == "Caribou" ]; then
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			else
+				PRUSA_TYPE=$TYPE
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "Prusa i3 '$PRUSA_TYPE'-'$BASE_MOD'"*/#define CUSTOM_MENDEL_NAME "Prusa i3 '$TYPE'-'$MOD'"/g' ${VARIANT}
+			fi
 			# Enable Slice High Temperature Thermistor
 			sed -i -e "s/\/\/#define SLICE_HT_EXTRUDER*/#define SLICE_HT_EXTRUDER/g" ${VARIANT}
 			# Change mintemp for Slice High Temperature Thermistor
@@ -410,11 +441,24 @@ for COMPANY in ${CompanyArray[@]}; do
 			echo $VARIANT
 			# Modify printer name
 			cp ${BASE} ${VARIANT}
-			sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'"/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			if [ $COMPANY == "Caribou" ]; then
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			else
+				if [ $TYPE == "MK25" ]; then
+					PRUSA_TYPE="MK2.5"
+				elif [ $TYPE == "MK25S" ]; then
+					PRUSA_TYPE="MK2.5S"
+				else
+					PRUSA_TYPE=$TYPE
+				fi
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "Prusa i3 '$PRUSA_TYPE'"*/#define CUSTOM_MENDEL_NAME "Prusa i3 '$TYPE'-'$MOD'"/g' ${VARIANT}
+			fi
+			# Hotend Type 
+			sed -i -e 's/#define NOZZLE_TYPE "E3Dv6full"*/#define NOZZLE_TYPE "Copperhead"/' ${VARIANT}
 			# Disable Extruder_Design_R3 for Caribou
 			sed -i -e "s/^#define EXTRUDER_DESIGN_R3*/\/\/#define EXTRUDER_DESIGN_R3/g" ${VARIANT}
-            # Enable LXG
-			sed -i -e "s/\/\/#define BONDTECH_LGX*/#define BONDTECH_LGX/g" ${VARIANT}
+            # Enable LGX
+			sed -i -e "s/\/\/#define BONDTECH_LGXC*/#define BONDTECH_LGXC/g" ${VARIANT}
 			# Printer Height
 			sed -i -e "s/^#define Z_MAX_POS ${HEIGHT}*/#define Z_MAX_POS ${LGXHEIGHT}/g" ${VARIANT}
 			if [ "$TYPE" == "MK3S" ]; then
@@ -430,8 +474,6 @@ for COMPANY in ${CompanyArray[@]}; do
 			sed -i -e 's/#define FILAMENTCHANGE_FINALFEED 25*/#define FILAMENTCHANGE_FINALFEED 20/' ${VARIANT}
 			# Display Type 
 			sed -i -e "s/\/\/#define WEH002004_OLED*/#define WEH002004_OLED/g" ${VARIANT}
-			# Enable Bondtech E3d MMU settings
-			sed -i -e "s/\/\/#define BONDTECH_MK3S*/#define BONDTECH_MK3S/g" ${VARIANT}
             # LGX PINDA xy offset
             sed -i -e "s/#define X_PROBE_OFFSET_FROM_EXTRUDER 23*/#define X_PROBE_OFFSET_FROM_EXTRUDER 22.25/g" ${VARIANT}
             sed -i -e "s/#define Y_PROBE_OFFSET_FROM_EXTRUDER 5*/#define Y_PROBE_OFFSET_FROM_EXTRUDER 11.5/g" ${VARIANT}

@@ -13,7 +13,7 @@
 #define PRINTER_MMU_TYPE PRINTER_MK3S_MMU2
 #define PRINTER_MMU_NAME PRINTER_MK3S_MMU2_NAME
 #define FILAMENT_SIZE "1_75mm_MK3"
-#define NOZZLE_TYPE "E3Dv6full"
+#define NOZZLE_TYPE "Copperhead"
 
 // Developer flag
 #define DEVELOPER
@@ -41,9 +41,10 @@
 
 //Extruder Design R3 based printer, like Caribou, Bear, Bondtech extruder
 //#define EXTRUDER_DESIGN_R3
-#define BONDTECH_MK3S
+//#define BONDTECH_MK3S
 //#define BONDTECH_MOSQUITO
 //#define BONDTECH_M_MAGNUM
+#define BONDTECH_LGXC
 
 // Uncomment the below for the Slice Engineering high temperature sensor
 //#define SLICE_HT_EXTRUDER

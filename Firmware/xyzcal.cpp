@@ -598,7 +598,7 @@ uint8_t xyzcal_xycoords2point(int16_t x, int16_t y)
 
 //MK3
 #if ((MOTHERBOARD == BOARD_EINSY_1_0a))
-  #ifdef BONDTECH_LGX
+  #ifdef BONDTECH_LGXC
 const int16_t xyzcal_point_xcoords[4] PROGMEM = {1200, 22000, 22000, 1200};
     const int16_t xyzcal_point_ycoords[4] PROGMEM = {500, 500, 19000, 19000};
   #else
