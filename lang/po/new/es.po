@@ -3949,7 +3949,7 @@ msgstr "Cuidado: Ha cambiado el tipo de impresora."
 #: Marlin_main.cpp:3680
 >>>>>>> upstream/MK3_3.10.0
 msgid "Was filament unload successful?"
-msgstr "Se cargocon exito el filamento?"
+msgstr "Se descargo con exito el filamento?"
 
 <<<<<<< HEAD
 # MSG_SELFTEST_WIRINGERROR
