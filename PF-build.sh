@@ -154,6 +154,7 @@
 # 27 Jan 2021, 3d-gussner, Add `-c`, `-p` and `-n` options
 # 27 Feb 2021, 3d-gussner, Add './lang-community.sh' and update exits
 # 20 Mar 2021, wschadow,   fixed paths arguments when sort.sh is called
+# 18 Jul 2021, wschadow,   variants in selection are sorted 
 #
 
 #### Start check if OSTYPE is supported
@@ -551,7 +552,7 @@ if [ -z "$variant_flag" ] ; then
 	PS3="Select a variant: "
 	while IFS= read -r -d $'\0' f; do
 		options[i++]="$f"
-	done < <(find Firmware/variants/ -maxdepth 1 -type f -name "*-MK*.h" -print0 )
+	done < <(find Firmware/variants/ -maxdepth 1 -type f -name "*-MK*.h" -print0 | sort -z)
 	select opt in "${options[@]}" "All" "Quit"; do
 		case $opt in
 			*.h)
@@ -997,6 +998,7 @@ do
 	# debranding
 	$SCRIPT_PATH/debranding_Caribou.sh
 done
+
 # Sort hexfiles only when build ALL is selected
 if [ ! -z "$ALL_VARIANTS" ]; then
 	if [ "$ALL_VARIANTS" == "All" ]; then

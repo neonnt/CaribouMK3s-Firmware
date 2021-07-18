@@ -21,8 +21,8 @@ extern PGM_P sPrinterName;
 #define FW_REVISION 1
 #define FW_VERSION "3.10.1-RC1"
 // #define FW_VERSION STR(FW_MAJOR) "." STR(FW_MINOR) "." STR(FW_REVISION) "-RC1"
-#define FW_COMMIT_NR 5389
-#define FW_COMMIT_HASH "654fab87"
+#define FW_COMMIT_NR 5390
+#define FW_COMMIT_HASH "93e777d8"
 
 // FW_VERSION_UNKNOWN means this is an unofficial build.
 // The firmware should only be checked into github with this symbol.

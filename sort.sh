@@ -19,6 +19,7 @@
 # 09 Sep 2020, 3d-gussner, Rebranding Caribou3d
 # 10 Sep 2020, 3d-gussner, fix some sorting issues due to new naming convention
 # 11 Jul 2021, wschadow, added LGX, added folders for Prusa and Caribou extruders
+# 18 Jul 2021, wschadow, a zip file of the sorted files is generated
 #
 # Folder tree:
 #.
@@ -127,6 +128,49 @@
 #│       │── Prusa
 #│       └── LGX
 #
+OS_FOUND=$( command -v uname)
+case $( "${OS_FOUND}" | tr '[:upper:]' '[:lower:]') in
+  linux*)
+    TARGET_OS="linux"
+   ;;
+  msys*|cygwin*|mingw*)
+    # or possible 'bash on windows'
+    TARGET_OS='windows'
+   ;;
+  nt|win*)
+    TARGET_OS='windows'
+    ;;
+  *)
+    TARGET_OS='unknown'
+    ;;
+esac
+# Windows
+if [ $TARGET_OS == "windows" ]; then
+    if [ $(uname -m) == "x86_64" ]; then
+        echo "$(tput setaf 2)Windows 64-bit found$(tput sgr0)"
+        Processor="64"
+    elif [ $(uname -m) == "i386" ]; then
+        echo "$(tput setaf 2)Windows 32-bit found$(tput sgr0)"
+        Processor="32"
+    fi
+# Linux
+elif [ $TARGET_OS == "linux" ]; then
+    if [ $(uname -m) == "x86_64" ]; then
+        echo "$(tput setaf 2)Linux 64-bit found$(tput sgr0)"
+        Processor="64"
+    elif [[ $(uname -m) == "i386" || $(uname -m) == "i686" ]]; then
+        echo "$(tput setaf 2)Linux 32-bit found$(tput sgr0)"
+        Processor="32"
+    elif [ $(uname -m) == "aarch64" ]; then
+        echo "$(tput setaf 2)Linux aarch64 bit found$(tput sgr0)"
+        Processor="aarch64"
+    fi
+else
+    echo "$(tput setaf 1)This script doesn't support your Operating system!"
+    echo "Please use Linux 64-bit or Windows 10 64-bit with Linux subsystem / git-bash"
+    echo "Read the notes of build.sh$(tput sgr0)"
+    exit 1
+fi
 # Set arrays for script
 # Array of companies
 declare -a CompanyArray=( "Caribou" "Prusa" )
@@ -155,7 +199,6 @@ fi
 
 echo "Start Path: "$Start_Path
 echo "Dest. Path: "$Destination_Path
-
 
 # Loop for printer types
 for COMPANY in ${CompanyArray[@]}; do
@@ -209,3 +252,27 @@ for COMPANY in ${CompanyArray[@]}; do
 		done
 	done
 done
+
+echo
+echo '   ... done'
+
+# =========================================================================================================
+# delete empty subdirectories
+find $Destination_Path -type d -empty -delete
+
+
+
+# =========================================================================================================
+# create zip-file for configuration
+echo
+echo '   creating zip file of sorted hex-files ....'
+if [ $TARGET_OS == "windows" ]; then
+    zip a $Destination_Path.zip  $Destination_Path/* | tail -4
+else
+	pushd $Destination_Path
+	zip -r ../$Destination_Path.zip  * | tail -4
+	popd
+fi
+echo
+echo '   ... done'
+ 
