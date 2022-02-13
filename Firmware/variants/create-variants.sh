@@ -41,7 +41,8 @@
 # 02 Sep 2020, 3d-gussner, Fix OLED display also for Prusa printers
 # 09 Sep 2020, 3d-gussner, Rebranding Caribou and new naming convention
 # 11 Sep 2020, 3d-gussner, Change EXTRUDER_ALTFAN_SPEED_SILENT speed
-# 09 May 2021, 3d-gussner, Add Bondtech LGX support
+# 09 May 2021, 3d-gussner, Add Bondtech LGXC support
+# 13 Feb 2022, wschadow, added LGXM and LGXMM support
 ################################################################################
 
 # Constants
@@ -415,9 +416,9 @@ echo "End $COMPANY BMMH"
 
 echo "Start $COMPANY LGXC"
 MOD="LGXC" ##Bondtech LGX Extruder with Copperhead hotend for MK3S
-declare -a LGXArray=( "MK3S" )
+declare -a LGXCArray=( "MK3S" )
 for COMPANY in ${CompanyArray[@]}; do
-	for TYPE in ${LGXArray[@]}; do
+	for TYPE in ${LGXCArray[@]}; do
 		echo "Type: $TYPE Mod: $MOD"
 		if [ "$TYPE" == "MK3S" ]; then
 			BOARD="EINSy10a"
@@ -481,3 +482,134 @@ for COMPANY in ${CompanyArray[@]}; do
 	done
 done
 echo "End $COMPANY LGXC"
+
+echo "Start $COMPANY LGM"
+MOD="LGM" ##Bondtech LGX Extruder with Mosquito hotend for MK3S
+declare -a LGXMArray=( "MK3S" )
+for COMPANY in ${CompanyArray[@]}; do
+	for TYPE in ${LGXMArray[@]}; do
+		echo "Type: $TYPE Mod: $MOD"
+		if [ "$TYPE" == "MK3S" ]; then
+			BOARD="EINSy10a"
+		else
+			echo "Unsupported controller"
+			exit 1
+		fi
+		if [ $COMPANY == "Caribou" ]; then
+			declare -a HeightsArray=( 220 320 420)
+		elif [ $COMPANY == "Prusa" ]; then
+			declare -a HeightsArray=( 210 )
+		fi
+		for HEIGHT in ${HeightsArray[@]}; do
+			BASE="$COMPANY$HEIGHT-$TYPE.h"
+			VARIANT="$COMPANY$HEIGHT-$TYPE-$MOD.h"
+			LGXHEIGHT=$(( $HEIGHT + $LGXHeightDiff ))
+			#echo $BASE
+			#echo $TYPE
+			#echo $HEIGHT
+			#echo $LGXHEIGHT
+			echo $VARIANT
+			# Modify printer name
+			cp ${BASE} ${VARIANT}
+			if [ $COMPANY == "Caribou" ]; then
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			else
+				if [ $TYPE == "MK25" ]; then
+					PRUSA_TYPE="MK2.5"
+				elif [ $TYPE == "MK25S" ]; then
+					PRUSA_TYPE="MK2.5S"
+				else
+					PRUSA_TYPE=$TYPE
+				fi
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "Prusa i3 '$PRUSA_TYPE'"*/#define CUSTOM_MENDEL_NAME "Prusa i3 '$TYPE'-'$MOD'"/g' ${VARIANT}
+			fi
+			# Hotend Type 
+			sed -i -e 's/#define NOZZLE_TYPE "E3Dv6full"*/#define NOZZLE_TYPE "Mosquito"/' ${VARIANT}
+			# Printer Height
+			sed -i -e "s/^#define Z_MAX_POS ${HEIGHT}*/#define Z_MAX_POS ${LGXHEIGHT}/g" ${VARIANT}
+			if [ "$TYPE" == "MK3S" ]; then
+				# E Steps for MK3 and MK3S with Bondetch extruder
+				sed -i -e 's/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,280}*/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,415}/' ${VARIANT}
+            fi
+			sed -i -e 's/#define TMC2130_USTEPS_E    32*/#define TMC2130_USTEPS_E    16/' ${VARIANT}
+			# Filament Load Distances (BPE gears are farther from the hotend)
+			sed -i -e 's/#define FILAMENTCHANGE_FIRSTFEED 70*/#define FILAMENTCHANGE_FIRSTFEED 80/' ${VARIANT}
+			sed -i -e 's/#define LOAD_FILAMENT_1 "G1 E70 F400"*/#define LOAD_FILAMENT_1 "G1 E80 F400"/' ${VARIANT}
+			sed -i -e 's/#define UNLOAD_FILAMENT_1 "G1 E-80 F7000"*/#define UNLOAD_FILAMENT_1 "G1 E-95 F7000"/' ${VARIANT}
+			sed -i -e 's/#define FILAMENTCHANGE_FINALRETRACT -80*/#define FILAMENTCHANGE_FINALRETRACT -95/' ${VARIANT}
+			sed -i -e 's/#define FILAMENTCHANGE_FINALFEED 70*/#define FILAMENTCHANGE_FINALFEED 80/' ${VARIANT}
+			# Enable Bondtech Mosquito MMU settings
+			sed -i -e "s/#define BONDTECH_MK3S*/\/\/#define BONDTECH_MK3S/g" ${VARIANT}
+			sed -i -e "s/\/\/#define BONDTECH_MOSQUITO*/#define BONDTECH_MOSQUITO/g" ${VARIANT}
+			# Display Type 
+			sed -i -e "s/\/\/#define WEH002004_OLED*/#define WEH002004_OLED/g" ${VARIANT}
+		done
+	done
+done
+echo "End $COMPANY LGM"
+
+echo "Start $COMPANY LGMM"
+MOD="LGMM" ##Bondtech LGX Extruder with Mosquito Magnum hotend for MK3S
+declare -a LGXMMArray=( "MK3S" )
+for COMPANY in ${CompanyArray[@]}; do
+	for TYPE in ${LGXMMArray[@]}; do
+		echo "Type: $TYPE Mod: $MOD"
+		if [ "$TYPE" == "MK3S" ]; then
+			BOARD="EINSy10a"
+		else
+			echo "Unsupported controller"
+			exit 1
+		fi
+		if [ $COMPANY == "Caribou" ]; then
+			declare -a HeightsArray=( 220 320 420)
+		elif [ $COMPANY == "Prusa" ]; then
+			declare -a HeightsArray=( 210 )
+		fi
+		for HEIGHT in ${HeightsArray[@]}; do
+			BASE="$COMPANY$HEIGHT-$TYPE.h"
+			VARIANT="$COMPANY$HEIGHT-$TYPE-$MOD.h"
+			LGXHEIGHT=$(( $HEIGHT + $LGXHeightDiff ))
+			#echo $BASE
+			#echo $TYPE
+			#echo $HEIGHT
+			#echo $LGXHEIGHT
+			echo $VARIANT
+			# Modify printer name
+			cp ${BASE} ${VARIANT}
+			if [ $COMPANY == "Caribou" ]; then
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'"*/#define CUSTOM_MENDEL_NAME "'$COMPANY$HEIGHT'-'$TYPE'-'$MOD'"/g' ${VARIANT}
+			else
+				if [ $TYPE == "MK25" ]; then
+					PRUSA_TYPE="MK2.5"
+				elif [ $TYPE == "MK25S" ]; then
+					PRUSA_TYPE="MK2.5S"
+				else
+					PRUSA_TYPE=$TYPE
+				fi
+				sed -i -e 's/^#define CUSTOM_MENDEL_NAME "Prusa i3 '$PRUSA_TYPE'"*/#define CUSTOM_MENDEL_NAME "Prusa i3 '$TYPE'-'$MOD'"/g' ${VARIANT}
+			fi
+			# Hotend Type 
+			sed -i -e 's/#define NOZZLE_TYPE "E3Dv6full"*/#define NOZZLE_TYPE "Mosquito Magnum"/' ${VARIANT}
+			# Printer Height
+			sed -i -e "s/^#define Z_MAX_POS ${HEIGHT}*/#define Z_MAX_POS ${LGXHEIGHT}/g" ${VARIANT}
+			if [ "$TYPE" == "MK3S" ]; then
+				# E Steps for MK3 and MK3S with Bondetch extruder
+				sed -i -e 's/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,280}*/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,415}/' ${VARIANT}
+            fi
+			sed -i -e 's/#define TMC2130_USTEPS_E    32*/#define TMC2130_USTEPS_E    16/' ${VARIANT}
+			# Filament Load Distances (BPE gears are farther from the hotend)
+			sed -i -e 's/#define FILAMENTCHANGE_FIRSTFEED 70*/#define FILAMENTCHANGE_FIRSTFEED 80/' ${VARIANT}
+			sed -i -e 's/#define LOAD_FILAMENT_1 "G1 E70 F400"*/#define LOAD_FILAMENT_1 "G1 E80 F400"/' ${VARIANT}
+			sed -i -e 's/#define UNLOAD_FILAMENT_1 "G1 E-80 F7000"*/#define UNLOAD_FILAMENT_1 "G1 E-95 F7000"/' ${VARIANT}
+			sed -i -e 's/#define FILAMENTCHANGE_FINALRETRACT -80*/#define FILAMENTCHANGE_FINALRETRACT -95/' ${VARIANT}
+			sed -i -e 's/#define FILAMENTCHANGE_FINALFEED 70*/#define FILAMENTCHANGE_FINALFEED 80/' ${VARIANT}
+			# Enable Bondtech Mosquito MMU settings
+			sed -i -e "s/#define BONDTECH_MK3S*/\/\/#define BONDTECH_MK3S/g" ${VARIANT}
+			sed -i -e "s/\/\/#define BONDTECH_MOSQUITO*/#define BONDTECH_MOSQUITO/g" ${VARIANT}
+			# Display Type 
+			sed -i -e "s/\/\/#define WEH002004_OLED*/#define WEH002004_OLED/g" ${VARIANT}
+		done
+	done
+done
+echo "End $COMPANY LGMM"
+
