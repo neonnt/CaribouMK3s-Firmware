@@ -1094,7 +1094,7 @@ prepare_hex_folders()
     fi
     
     #Define OUTPUT_FILENAME
-    OUTPUT_FILENAME=FW$FW-Build$BUILD-$VARIANT
+    OUTPUT_FILENAME=FW$FW-$VARIANT-Build$BUILD
     #Check for OUTPUT_FILENAME_SUFFIX and add it
     if [ ! -z $OUTPUT_FILENAME_SUFFIX ]; then
         OUTPUT_FILENAME="${OUTPUT_FILENAME}$OUTPUT_FILENAME_SUFFIX"
@@ -1353,7 +1353,9 @@ create_multi_firmware()
         if [ "$MOTHERBOARD" = "BOARD_EINSY_1_0a" ]; then
             echo "$(tput setaf 2)Copying multi language firmware for MK3/Einsy board to PF-build-hex folder$(tput sgr 0)"
             # End of "lang.bin" for MK3 and MK3S copy
-            cp -f firmware.hex $SCRIPT_PATH/../$OUTPUT_FOLDER/$OUTPUT_FILENAME.hex
+ #           cp -f firmware.hex $SCRIPT_PATH/../$OUTPUT_FOLDER/$OUTPUT_FILENAME.hex
+        	cp -f firmware.hex $SCRIPT_PATH/../$OUTPUT_FOLDER/FW$FW-$VARIANT-Build$BUILD-MULTI.hex || exit 34
+
             cp -f $BUILD_PATH/Firmware.ino.elf $SCRIPT_PATH/../$OUTPUT_FOLDER/$OUTPUT_FILENAME.elf
         else
             echo "$(tput setaf 2)Zip multi language firmware for MK2.5/miniRAMbo board to PF-build-hex folder$(tput sgr 0)"
