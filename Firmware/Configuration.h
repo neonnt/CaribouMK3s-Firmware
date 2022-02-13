@@ -27,7 +27,7 @@ extern PGM_P sPrinterName;
     #define FW_VERSION STR(FW_MAJOR) "." STR(FW_MINOR) "." STR(FW_REVISION) "-" STR(FW_FLAVOR) "" STR(FW_FLAVERSION)
 #endif
 
-#define FW_COMMIT_NR 5508
+#define FW_COMMIT_NR 5509
 #define FW_COMMIT_HASH "e62969c0"
 
 // FW_VERSION_UNKNOWN means this is an unofficial build.
@@ -82,7 +82,7 @@ extern PGM_P sPrinterName;
 //#define STRING_VERSION "1.0.2"
 
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
-#define STRING_CONFIG_H_AUTHOR "(3D-Gussner, Caribou3d)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Caribou3d)" // Who made the changes.
 
 // SERIAL_PORT selects which serial port should be used for communication with the host.
 // This allows the connection of wireless adapters (for instance) to non-default port pins.
