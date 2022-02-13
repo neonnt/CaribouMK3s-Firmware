@@ -1108,7 +1108,7 @@ prepare_hex_folders()
         if [ $OUTPUT == "1" ] ; then
             read -t 10 -p "Press Enter to continue..."
         fi
-    elif [[ -f "$SCRIPT_PATH/../$OUTPUT_FOLDER/$OUTPUT_FILENAME-EN_ONLY.hex"  &&  "$LANGUAGES" == "EN_ONLY" ]]; then
+    elif [[ -f "$SCRIPT_PATH/../$OUTPUT_FOLDER/$OUTPUT_FILENAME-EN.hex"  &&  "$LANGUAGES" == "EN" ]]; then
         echo ""
         ls -1 $SCRIPT_PATH/../$OUTPUT_FOLDER/FW$FW-$VARIANT-Build$BUILD-EN.hex | xargs -n1 basename
         echo "$(tput setaf 6)This hex file to be compiled already exists! To cancel this process press CRTL+C and rename existing hex file.$(tput sgr 0)"
