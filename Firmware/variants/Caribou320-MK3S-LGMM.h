@@ -56,7 +56,7 @@
 
 // Steps per unit {X,Y,Z,E}
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200/8,140}
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200/8,415}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200/8,400}
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200/8,560}
 
 // Endstop inverting
@@ -82,7 +82,7 @@
 #define X_MIN_POS 0
 #define Y_MAX_POS 212.5
 #define Y_MIN_POS -4 //orig -4
-#define Z_MAX_POS 326
+#define Z_MAX_POS 316
 #define Z_MIN_POS 0.15
 
 // Canceled home position

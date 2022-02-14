@@ -59,6 +59,7 @@ HEIGHT=210
 BASE="1_75mm_$TYPE-$BOARD-E3Dv6full.h"
 BMGHeightDiff=-3 #Bondtech extruders are bit higher than stock one
 LGXHeightDiff=6 #Bondtech LGX is shorter than Prusa extruder
+LGXMHeightDiff=-4 #Bondtech LGX is shorter than Prusa extruder
 
 # Arrays
 declare -a CompanyArray=( "Caribou" "Prusa" )
@@ -503,7 +504,7 @@ for COMPANY in ${CompanyArray[@]}; do
 		for HEIGHT in ${HeightsArray[@]}; do
 			BASE="$COMPANY$HEIGHT-$TYPE.h"
 			VARIANT="$COMPANY$HEIGHT-$TYPE-$MOD.h"
-			LGXHEIGHT=$(( $HEIGHT + $LGXHeightDiff ))
+			LGXHEIGHT=$(( $HEIGHT + $LGXMHeightDiff ))
 			#echo $BASE
 			#echo $TYPE
 			#echo $HEIGHT
@@ -529,7 +530,7 @@ for COMPANY in ${CompanyArray[@]}; do
 			sed -i -e "s/^#define Z_MAX_POS ${HEIGHT}*/#define Z_MAX_POS ${LGXHEIGHT}/g" ${VARIANT}
 			if [ "$TYPE" == "MK3S" ]; then
 				# E Steps for MK3 and MK3S with Bondetch extruder
-				sed -i -e 's/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,280}*/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,415}/' ${VARIANT}
+				sed -i -e 's/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,280}*/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,400}/' ${VARIANT}
             fi
 			sed -i -e 's/#define TMC2130_USTEPS_E    32*/#define TMC2130_USTEPS_E    16/' ${VARIANT}
 			# Filament Load Distances (BPE gears are farther from the hotend)
@@ -568,7 +569,7 @@ for COMPANY in ${CompanyArray[@]}; do
 		for HEIGHT in ${HeightsArray[@]}; do
 			BASE="$COMPANY$HEIGHT-$TYPE.h"
 			VARIANT="$COMPANY$HEIGHT-$TYPE-$MOD.h"
-			LGXHEIGHT=$(( $HEIGHT + $LGXHeightDiff ))
+			LGXHEIGHT=$(( $HEIGHT + $LGXMHeightDiff ))
 			#echo $BASE
 			#echo $TYPE
 			#echo $HEIGHT
@@ -594,7 +595,7 @@ for COMPANY in ${CompanyArray[@]}; do
 			sed -i -e "s/^#define Z_MAX_POS ${HEIGHT}*/#define Z_MAX_POS ${LGXHEIGHT}/g" ${VARIANT}
 			if [ "$TYPE" == "MK3S" ]; then
 				# E Steps for MK3 and MK3S with Bondetch extruder
-				sed -i -e 's/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,280}*/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,415}/' ${VARIANT}
+				sed -i -e 's/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,280}*/#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200\/8,400}/' ${VARIANT}
             fi
 			sed -i -e 's/#define TMC2130_USTEPS_E    32*/#define TMC2130_USTEPS_E    16/' ${VARIANT}
 			# Filament Load Distances (BPE gears are farther from the hotend)
