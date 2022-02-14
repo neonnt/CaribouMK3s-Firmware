@@ -20,7 +20,7 @@
 # 10 Sep 2020, 3d-gussner, fix some sorting issues due to new naming convention
 # 11 Jul 2021, wschadow, added LGX, added folders for Prusa and Caribou extruders
 # 18 Jul 2021, wschadow, a zip file of the sorted files is generated
-# 14 Feb 2020, wschadow, added LGXM and LGXMM
+# 14 Feb 2020, wschadow, added LGXM and LGXMM, only sort and zip .elf files
 #
 # Folder tree:
 #.
@@ -49,7 +49,8 @@
 #│       │    ├── MOSQUITO
 #│       │    └── MOSQUITO_MAGNUM
 #│       │── Caribou
-#│       └── LGX
+#│       ├── LGXC
+#        └── LGXM
 #├── Caribou320
 #│   ├── MK25
 #│   │   │── BONDTECH
@@ -75,7 +76,8 @@
 #│       │    ├── MOSQUITO
 #│       │    └── MOSQUITO_MAGNUM
 #│       │── Caribou
-#│       └── LGX
+#│       ├── LGXC
+#        └── LGXM
 #├── Caribou420
 #│   ├── MK25
 #│   │   │── BONDTECH
@@ -101,7 +103,8 @@
 #│       │    ├── MOSQUITO
 #│       │    └── MOSQUITO_MAGNUM
 #│       │── Caribou
-#│       └── LGX
+#│       ├── LGXC
+#        └── LGXM
 #└── Prusa210
 #│   ├── MK25
 #│   │   │── BONDTECH
@@ -238,22 +241,23 @@ for COMPANY in ${CompanyArray[@]}; do
 				esac
 				# Find all Bondtech hex files and copy them to destination folder sorted by Type, Height and Bontech txpe.
 				# BONDTECH_SHORT -> Bondtech folder name
-				find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-$BONDTECH_SHORT-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGHT/$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/BONDTECH/$BONDTECH_TYPE \;
+				find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-$BONDTECH_SHORT-Build*.hex" -type f -not -path "$Destination_Path/$COMPANY$HEIGHT/$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/BONDTECH/$BONDTECH_TYPE \;
 				# Find other Bondtech hex files and copy them to destination folder sorted By Type, Height and Bontech txpe.
 				# BONDTECH_SHORT2 -> Bondtech folder name
-				find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-$BONDTECH_SHORT2-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/BONDTECH/$BONDTECH_TYPE \;
+				find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-$BONDTECH_SHORT2-Build*.hex" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/BONDTECH/$BONDTECH_TYPE \;
 			done
 			if [ $TYPE == "MK3S" ]; then
 			    # Find all LGXC files and copy them to the destination folder
 			    mkdir -p $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXC
-			    find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-LGXC-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXC \;
+			    find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-LGXC-Build*.hex" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXC \;
+				# Find all LGM and LGMM files and copy them to the desitnation folder
 			    mkdir -p $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXM
-			    find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-LGXM-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXM \;
-			    find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-LGXMM-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXM \;
+			    find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-LGM-Build*.hex" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXM \;
+			    find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-LGMM-Build*.hex" -type f -not -path "$Destination_Path/$COMPANY$HEIGH-$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/LGXM \;
 			fi
 			# Find rest hex files and copy them to destination folder sorted by Type and Height
 		    mkdir -p $Destination_Path/$COMPANY$HEIGHT/$TYPE/$COMPANY
-			find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-Build*" -type f -not -path "$Destination_Path/$COMPANY$HEIGHT/$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/$COMPANY \;
+			find -L $Start_Path -name "*$COMPANY$HEIGHT-$TYPE-Build*.hex" -type f -not -path "$Destination_Path/$COMPANY$HEIGHT/$TYPE/*" -exec cp {} $Destination_Path/$COMPANY$HEIGHT/$TYPE/$COMPANY \;
 		done
 	done
 done
