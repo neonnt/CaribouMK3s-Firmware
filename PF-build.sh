@@ -1239,26 +1239,26 @@ compile_en_firmware()
     ## Check board flash size
     CURRENT_BOARD_FLASH=$(grep "#define FLASHEND" $BUILD_ENV_PATH/hardware/tools/avr/avr/include/avr/iom2560.h | sed -e's/.* //g'|cut -d ' ' -f3|tr -d $'\n')
     CURRENT_BOARD_maximum_size=$(grep "prusa_einsy_rambo.upload.maximum_size" $BUILD_ENV_PATH/portable/packages/$BOARD_PACKAGE_NAME/hardware/avr/$BOARD_VERSION/boards.txt |cut -d '=' -f2|tr -d $'\n')
-    if [[ $CURRENT_BOARD_FLASH != "0x3FFFF" || $CURRENT_BOARD_maximum_size != "253952" ]] ; then
+#    if [[ $CURRENT_BOARD_FLASH != "0x3FFFF" || $CURRENT_BOARD_maximum_size != "253952" ]] ; then
         echo "Board flash has been already modified or not reset"
         echo "Current flash size:" $CURRENT_BOARD_FLASH
         echo "Current max.  size:" $CURRENT_BOARD_maximum_size
-        PS3="Select $(tput setaf 2)Yes$(tput sgr 0) if you want to reset it."
-        select yn in "Yes" "No"; do
-            case $yn in
-                Yes)
+ #       PS3="Select $(tput setaf 2)Yes$(tput sgr 0) if you want to reset it."
+ #       select yn in "Yes" "No"; do
+ #           case $yn in
+ #               Yes)
                     echo "$(tput setaf 1)Resetting board flash size$(tput sgr 0)"
                     sed -i -- "s/^#define FLASHEND .*$/#define FLASHEND        0x3FFFF/g" $BUILD_ENV_PATH/hardware/tools/avr/avr/include/avr/iom2560.h
                     sed -i -- "s/^prusa_einsy_rambo.upload.maximum_size.*/prusa_einsy_rambo.upload.maximum_size=253952/g" $BUILD_ENV_PATH/portable/packages/$BOARD_PACKAGE_NAME/hardware/avr/$BOARD_VERSION/boards.txt
-                    break
-                    ;;
-                *)
-                    echo "$(tput setaf 3)Continuing with modified flash size$(tput sgr 0)"
-                    break
-                    ;;
-            esac
-        done
-    fi
+ #                   break
+ #                   ;;
+ #               *)
+ #                   echo "$(tput setaf 3)Continuing with modified flash size$(tput sgr 0)"
+ #                   break
+ #                   ;;
+ ##           esac
+ #       done
+ #   fi
     ## Modify boad flash size
     if [[ ! -z $BOARD_FLASH && "$BOARD_FLASH" != "0x3FFFF" ]] ; then
         echo "Modifying board flash size (hex):"
