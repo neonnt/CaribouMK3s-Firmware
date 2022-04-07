@@ -7,8 +7,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nl\n"
 "Project-Id-Version: Prusa-Firmware\n"
-"POT-Creation-Date: Sun Feb 13 16:09:43 WEST 2022\n"
-"PO-Revision-Date: Sun Feb 13 16:09:43 WEST 2022\n"
+"POT-Creation-Date: Thu 07 Apr 2022 11:31:31 PM CEST\n"
+"PO-Revision-Date: Thu 07 Apr 2022 11:31:31 PM CEST\n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.0.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -21,7 +21,7 @@ msgid " 0.3 or older"
 msgstr " 0.3 of ouder"
 
 # MSG_FS_V_03_OR_OLDER c=18
-#: Marlin_main.cpp:9906
+#: Marlin_main.cpp:9910
 msgid "FS v0.3 or older"
 msgstr "FS 0.3 of ouder"
 
@@ -31,7 +31,7 @@ msgid " 0.4 or newer"
 msgstr " 0.4 of nieuwer"
 
 # MSG_FS_V_04_OR_NEWER c=18
-#: Marlin_main.cpp:9905
+#: Marlin_main.cpp:9909
 msgid "FS v0.4 or newer"
 msgstr "FS 0.4 of nieuwer"
 
@@ -511,7 +511,7 @@ msgid "Heater/Thermistor"
 msgstr "Verwarmer/Therm."
 
 # MSG_BED_HEATING_SAFETY_DISABLED c=20 r=4
-#: Marlin_main.cpp:9896
+#: Marlin_main.cpp:9900
 msgid "Heating disabled by safety timer."
 msgstr "Verwarming uitgeschakeld door veiligheidstimer."
 
@@ -846,7 +846,7 @@ msgid "Move Z"
 msgstr "Verplaats Z"
 
 # MSG_NO_MOVE c=20
-#: Marlin_main.cpp:5874
+#: Marlin_main.cpp:5878
 msgid "No move."
 msgstr "Geen beweging."
 
@@ -896,7 +896,7 @@ msgid "Nozzle"
 msgstr "Tuit"
 
 # MSG_DEFAULT_SETTINGS_LOADED c=20 r=6
-#: Marlin_main.cpp:1607
+#: Marlin_main.cpp:1609
 msgid "Old settings found. Default PID, Esteps etc. will be set."
 msgstr "Oude instellingen gevonden. Standaard PID, E-steps etc. instellingen worden geladen."
 
@@ -961,7 +961,7 @@ msgid "Please check our handbook and fix the problem. Then resume the Wizard by 
 msgstr "Controleer aub ons handboek en los het probleem op. Hervat vervolgens de wizard door de printer opnieuw te starten."
 
 # MSG_CHECK_IDLER c=20 r=5
-#: Marlin_main.cpp:3812
+#: Marlin_main.cpp:3814
 msgid "Please open idler and remove filament manually."
 msgstr "Open rondsel en verwijder filament handmatig."
 
@@ -991,7 +991,7 @@ msgid "Please remove steel sheet from heatbed."
 msgstr "Verwijder staalplaat van het bed."
 
 # MSG_RUN_XYZ c=20 r=4
-#: Marlin_main.cpp:5360
+#: Marlin_main.cpp:5364
 msgid "Please run XYZ calibration first."
 msgstr "Voer eerst de XYZ-kalibratie uit."
 
@@ -1031,7 +1031,7 @@ msgid "Please upgrade."
 msgstr "Voer een upgrade uit"
 
 # MSG_PRESS_TO_PREHEAT c=20 r=4
-#: Marlin_main.cpp:12071
+#: Marlin_main.cpp:12075
 msgid "Press the knob to preheat nozzle and continue."
 msgstr "Druk op de knop om de tuit voor te verwarmen en door te gaan."
 
@@ -1126,7 +1126,7 @@ msgid "Please check the IR sensor connection, unload filament if present."
 msgstr "AUB IR sensor ver- binding kontrolleren , verwijder filament indien aanwezig."
 
 # MSG_RECOVERING_PRINT c=20
-#: Marlin_main.cpp:11415
+#: Marlin_main.cpp:11419
 msgid "Recovering print"
 msgstr "Print herstellen"
 
@@ -1216,7 +1216,7 @@ msgid "Selftest failed"
 msgstr "Zelftest mislukt"
 
 # MSG_FORCE_SELFTEST c=20 r=8
-#: Marlin_main.cpp:1639
+#: Marlin_main.cpp:1641
 msgid "Selftest will be run to calibrate accurate sensorless rehoming."
 msgstr "Zelftest zal worden uitgevoerd om nauwkeurige sensorloze auto positie te kalibreren."
 
@@ -1296,7 +1296,7 @@ msgid "Runouts"
 msgstr "Fouten"
 
 # MSG_Z-LEVELING_ENFORCED c=20 r=4
-#: Marlin_main.cpp:3317
+#: Marlin_main.cpp:3319
 msgid "Some problem encountered, Z-leveling enforced ..."
 msgstr "Er is een probleem opgetreden, Z-kalibratie afgedwongen ..."
 
@@ -1316,7 +1316,7 @@ msgid "Spinning"
 msgstr "Draait"
 
 # MSG_TEMP_CAL_WARNING c=20 r=4
-#: Marlin_main.cpp:5373
+#: Marlin_main.cpp:5377
 msgid "Stable ambient temperature 21-26C is needed a rigid stand is required."
 msgstr "En stabiele 21-26C omgevingstemperatuur is nodig,een stevige stand is vereist."
 
@@ -1456,7 +1456,7 @@ msgid "unknown"
 msgstr "onbekend"
 
 # MSG_USERWAIT c=20
-#: Marlin_main.cpp:4369
+#: Marlin_main.cpp:4371
 msgid "Wait for user..."
 msgstr "Wacht op gebruiker.."
 
@@ -1471,22 +1471,22 @@ msgid "Waiting for PINDA probe cooling"
 msgstr "Wachten op afkoelen van PINDA"
 
 # MSG_CHANGED_BOTH c=20 r=4
-#: Marlin_main.cpp:1599
+#: Marlin_main.cpp:1601
 msgid "Warning: both printer type and motherboard type changed."
 msgstr "Waarschuwing: zowel het printertype als het moederbordtype is gewijzigd."
 
 # MSG_CHANGED_MOTHERBOARD c=20 r=4
-#: Marlin_main.cpp:1591
+#: Marlin_main.cpp:1593
 msgid "Warning: motherboard type changed."
 msgstr "Waarschuwing: type moederbord gewijzigd."
 
 # MSG_CHANGED_PRINTER c=20 r=4
-#: Marlin_main.cpp:1595
+#: Marlin_main.cpp:1597
 msgid "Warning: printer type changed."
 msgstr "Waarschuwing: printertype gewijzigd."
 
 # MSG_UNLOAD_SUCCESSFUL c=20 r=2
-#: Marlin_main.cpp:3803
+#: Marlin_main.cpp:3805
 msgid "Was filament unload successful?"
 msgstr "Is filament succes- vol verwijderd?"
 
