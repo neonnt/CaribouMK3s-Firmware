@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+#
+# Version 1.0.1 Build 10
 #
 # Version 1.0.1
 #
@@ -12,17 +14,45 @@
 # 9 June 2020, 3d-gussner, colored output
 #############################################################################
 #
+# 31 May  2018, XPila,     Initial
+# 17 Dec. 2021, 3d-gussner, Change default Arduino path to by PF-build.sh
+#                           created one
+#                           Prepare to use one config file for all languages
+# 11 Jan. 2022, 3d-gussner, Added version and Change log colored output
+#                           Use `git rev-list --count HEAD config.sh`
+#                           to get Build Nr
+#                           Check if variables are set by other scripts
+#                           and use these. More flexible for different build
+#                           scripts
+#                           Check correctly if files or dirs exist
+# 10 Feb. 2022, 3d-gussner, Add SRCDIR for compatibility with build server
+#############################################################################
+#
+if [ -z "$SRCDIR" ]; then
+    export SRCDIR=".."
+fi
+
+LNGDIR="$( cd "$(dirname "$0")" ; pwd -P )"
+export LNGDIR=$LNGDIR
+
 # Arduino main folder:
 if [ -z "$ARDUINO" ]; then
-    export ARDUINO=C:/arduino-1.8.5
+    export ARDUINO=../../PF-build-env-1.0.6/1.8.5-1.0.0-linux-64 #C:/arduino-1.8.5
 fi
 #
+
 # Arduino builder:
-export BUILDER=$ARDUINO/arduino-builder
+if [ -z "$BUILDER" ]; then
+    export BUILDER=$ARDUINO/arduino-builder
+fi
 #
 # AVR gcc tools:
-export OBJCOPY=$ARDUINO/hardware/tools/avr/bin/avr-objcopy
-export OBJDUMP=$ARDUINO/hardware/tools/avr/bin/avr-objdump
+if [ -z "$OBJCOPY" ]; then
+    export OBJCOPY=$ARDUINO/hardware/tools/avr/bin/avr-objcopy
+fi
+if [ -z "$OBJDUMP" ]; then
+    export OBJDUMP=$ARDUINO/hardware/tools/avr/bin/avr-objdump
+fi
 #
 # Output folder:
 if [ -z "$OUTDIR" ]; then
@@ -30,14 +60,43 @@ if [ -z "$OUTDIR" ]; then
 fi
 #
 # Objects folder:
-export OBJDIR="$OUTDIR/sketch"
+if [ -z "$OBJDIR" ]; then
+    export OBJDIR="$OUTDIR/sketch"
+fi
 #
 # Generated elf file:
-export INOELF="$OUTDIR/Firmware.ino.elf"
+if [ -z "$INOELF" ]; then
+    export INOELF="$OUTDIR/Firmware.ino.elf"
+fi
 #
 # Generated hex file:
-export INOHEX="$OUTDIR/Firmware.ino.hex"
+if [ -z "$INOHEX" ]; then
+    export INOHEX="$OUTDIR/Firmware.ino.hex"
+fi
+#
+# Set default languages
+if [ -z "$LANGUAGES" ]; then
+    export LANGUAGES="cz de es fr it pl"
+fi
+#
+# Check for community languages
+MAX_COMMINITY_LANG=10 # Total 16 - 6 default
+COMMUNITY_LANGUAGES=""
+#Search Firmware/config.h for active community group
+COMMUNITY_LANG_GROUP=$(grep --max-count=1 "^#define COMMUNITY_LANG_GROUP" $SRCDIR/Firmware/config.h| cut -d ' ' -f3)
 
+# Search Firmware/config.h for active community languanges
+if [ "$COMMUNITY_LANG_GROUP" = "1" ]; then
+    COMMUNITY_LANGUAGES=$(grep --max-count=$MAX_COMMINITY_LANG "^#define COMMUNITY_LANG_GROUP1_" $SRCDIR/Firmware/config.h| cut -d '_' -f4 |cut -d ' ' -f1 |tr '[:upper:]' '[:lower:]'| tr '\n' ' ')
+elif [ "$COMMUNITY_LANG_GROUP" = "2" ]; then
+    COMMUNITY_LANGUAGES=$(grep --max-count=$MAX_COMMINITY_LANG "^#define COMMUNITY_LANG_GROUP2_" $SRCDIR/Firmware/config.h| cut -d '_' -f4 |cut -d ' ' -f1 |tr '[:upper:]' '[:lower:]'| tr '\n' ' ')
+elif [ "$COMMUNITY_LANG_GROUP" = "3" ]; then
+    COMMUNITY_LANGUAGES=$(grep --max-count=$MAX_COMMINITY_LANG "^#define COMMUNITY_LANG_GROUP3_" $SRCDIR/Firmware/config.h| cut -d '_' -f4 |cut -d ' ' -f1 |tr '[:upper:]' '[:lower:]'| tr '\n' ' ')
+fi
+
+if [ -z "$COMMUNITY_LANGUAGES" ]; then
+    export COMMUNITY_LANGUAGES="$COMMUNITY_LANGUAGES"
+fi
 
 echo "$(tput setaf 2)config.sh started$(tput sgr0)" >&2
 
@@ -66,6 +125,12 @@ if [ -e $INOELF ]; then echo "$(tput setaf 2)OK$(tput sgr0)" >&2; else echo "$(t
 
 echo -n " Generated hex file: " >&2
 if [ -e $INOHEX ]; then echo "$(tput setaf 2)OK$(tput sgr0)" >&2; else echo "$(tput setaf 1)NG!$(tput sgr0)" >&2; _err=8; fi
+
+echo -n " Languages: " >&2
+echo "$(tput setaf 2)$LANGUAGES$(tput sgr0)" >&2
+
+echo -n " Community languages: " >&2
+echo "$(tput setaf 2)$COMMUNITY_LANGUAGES$(tput sgr0)" >&2
 
 if [ $_err -eq 0 ]; then
  echo "$(tput setaf 2)config.sh finished with success$(tput sgr0)" >&2
