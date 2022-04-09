@@ -854,7 +854,7 @@ if [ -z "$variant_flag" ] ; then
     PS3="Select a variant: "
     while IFS= read -r -d $'\0' f; do
         options[i++]="$f"
-    done < <(find Firmware/variants/ -maxdepth 1 -type f -name "*.h" -print0 )
+    done < <(find Firmware/variants/ -maxdepth 1 -type f -name "*-MK*.h" -print0 )
     IFS=$'\n' sorted=($(sort -n <<<"${options[*]}")); unset IFS
     select opt in "${sorted[@]}" "All" "Quit"; do
         case $opt in
@@ -1482,7 +1482,10 @@ sort_hexfile()
 # Sort hexfiles only when build ALL is selected
 if [ ! -z "$ALL_VARIANTS" ]; then
 	if [ "$ALL_VARIANTS" == "All" ]; then
-		$SCRIPT_PATH/sort.sh ../$OUTPUT_PATH ../$OUTPUT_PATH-sorted/
+        pwd
+        echo $PWD
+        echo $SCRIPT_PATH
+		$SCRIPT_PATH/sort.sh $SCRIPT_PATH/../$OUTPUT_PATH $SCRIPT_PATH/../$OUTPUT_PATH-sorted/
 	else
 		echo "$(tput setaf 1)ALL_VARIANTS argument is wrong!$(tput sgr0)"
 		echo "Only $(tput setaf 2)'All'$(tput sgr0) is allowed as argument!$(tput sgr0)"
@@ -1503,8 +1506,8 @@ failures 0
 echo "Build done, please use Slic3rPE > 1.41.0 to upload the firmware"
 echo "more information how to flash firmware https://www.prusa3d.com/drivers/ $(tput sgr 0)"
 echo
-echo "Files:"
-ls -r -h $SCRIPT_PATH/../PF-build-hex/FW$FW-Build$BUILD/*
+#echo "Files:"
+#ls -r -h $SCRIPT_PATH/../PF-build-hex/FW$FW-Build$BUILD/*
 }
 #### End: Finish script
 #### End: building

@@ -278,8 +278,13 @@ echo '   creating zip file of sorted hex-files ....'
 if [ $TARGET_OS == "windows" ]; then
     zip a $Destination_Path.zip  $Destination_Path/* | tail -4
 else
+ 	ZIPNAMETMP=${Destination_Path%*/}
+	ZIPNAME=${ZIPNAMETMP##*/}
+	echo 'zipname'
+	echo $ZIPNAME
+	
 	pushd $Destination_Path
-	zip -r ../$Destination_Path.zip  * | tail -4
+	zip -r ../$Destination_Path/$ZIPNAME.zip  * | tail -4
 	popd
 fi
 echo
