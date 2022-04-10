@@ -849,6 +849,7 @@ fi
 
 #
 # '-v' argument defines which variant of the Prusa Firmware will be compiled 
+
 if [ -z "$variant_flag" ] ; then
     # Select which variant of the Prusa Firmware will be compiled, like
     PS3="Select a variant: "
@@ -857,6 +858,7 @@ if [ -z "$variant_flag" ] ; then
     done < <(find Firmware/variants/ -maxdepth 1 -type f -name "*-MK*.h" -print0 )
     IFS=$'\n' sorted=($(sort -n <<<"${options[*]}")); unset IFS
     select opt in "${sorted[@]}" "All" "Quit"; do
+        echo $opt
         case $opt in
             *.h)
                 VARIANT=$(basename "$opt" ".h")
@@ -1028,7 +1030,6 @@ prepare_code_for_compiling()
     else
         # Find and replace build version in Configuration.h file
         BUILD_ORG=$(grep --max-count=1 "\bFW_COMMIT_NR\b" $SCRIPT_PATH/Firmware/Configuration.h | sed -e's/  */ /g'|cut -d ' ' -f3)
-        echo "Original build number: $BUILD_ORG"
         if [ "$BUILD_ORG" != "$BUILD" ]; then
             echo "New build number     : $BUILD"
             sed -i -- "s/^#define FW_COMMIT_NR.*/#define FW_COMMIT_NR $BUILD/g" $SCRIPT_PATH/Firmware/Configuration.h
@@ -1141,7 +1142,7 @@ prepare_hex_folders()
 #### Start: List usefull data
 list_usefull_data()
 {
-    echo "$(tput setaf 2)$(tput setab 7) "
+    echo "$(tput setaf 2)$(tput setab 7)"
     echo "Printer        :" $MK404_PRINTER
     echo "Variant        :" $VARIANT
     echo "Firmware       :" $FW
@@ -1153,8 +1154,7 @@ list_usefull_data()
     echo "Board mem      :" $BOARD_MEM
     echo "Languages      :" $LANGUAGES
     echo "Hex-file Folder:" $OUTPUT_FOLDER
-    echo "Hex filename   :" $OUTPUT_FILENAME
-    echo "$(tput sgr0)"
+    echo "Hex filename   :" $OUTPUT_FILENAME "$(tput sgr0)"
 
 }
 #### End: List usefull data
@@ -1482,9 +1482,6 @@ sort_hexfile()
 # Sort hexfiles only when build ALL is selected
 if [ ! -z "$ALL_VARIANTS" ]; then
 	if [ "$ALL_VARIANTS" == "All" ]; then
-        pwd
-        echo $PWD
-        echo $SCRIPT_PATH
 		$SCRIPT_PATH/sort.sh $SCRIPT_PATH/../$OUTPUT_PATH $SCRIPT_PATH/../$OUTPUT_PATH-sorted/
 	else
 		echo "$(tput setaf 1)ALL_VARIANTS argument is wrong!$(tput sgr0)"
@@ -1655,8 +1652,12 @@ check_ArduinoIDE_User_interaction
 set_paths
 check_branch_changed
 
+VariantCount=1
 for v in ${VARIANTS[*]}
 do
+    echo
+    echo "Variant count: " $VariantCount 
+    ((VariantCount=VariantCount+1))
     check_script_failed_nr1
     check_script_failed_nr2
     make_backup1
