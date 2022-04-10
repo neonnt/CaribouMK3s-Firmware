@@ -887,13 +887,13 @@ else
     elif [ "$variant_flag" == "All" ] ; then
         while IFS= read -r -d $'\0' f; do
             options[i++]="$f"
-        done < <(find Firmware/variants/ -maxdepth 1 -type f -name "*.h" -print0 )
+        done < <(find Firmware/variants/ -maxdepth 1 -type f -name "*-MK*.h" -print0 )
         VARIANT="All"
         VARIANTS=${options[*]}
     else
         echo "$(tput setaf 1)Argument $variant_flag could not be found in Firmware/variants please choose a valid one.$(tput sgr0)"
         echo "Only $(tput setaf 2)'All'$(tput sgr0) and file names below are allowed as variant '-v' argument.$(tput setaf 2)"
-        ls -1 $SCRIPT_PATH/Firmware/variants/*.h | xargs -n1 basename
+        ls -1 $SCRIPT_PATH/Firmware/variants/*-MK*.h | xargs -n1 basename
         echo "$(tput sgr0)"
         failures 4
     fi
