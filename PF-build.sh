@@ -858,7 +858,6 @@ if [ -z "$variant_flag" ] ; then
     done < <(find Firmware/variants/ -maxdepth 1 -type f -name "*-MK*.h" -print0 )
     IFS=$'\n' sorted=($(sort -n <<<"${options[*]}")); unset IFS
     select opt in "${sorted[@]}" "All" "Quit"; do
-        echo $opt
         case $opt in
             *.h)
                 VARIANT=$(basename "$opt" ".h")
@@ -889,6 +888,7 @@ else
             options[i++]="$f"
         done < <(find Firmware/variants/ -maxdepth 1 -type f -name "*-MK*.h" -print0 )
         VARIANT="All"
+        ALL_VARIANTS="All"
         VARIANTS=${options[*]}
     else
         echo "$(tput setaf 1)Argument $variant_flag could not be found in Firmware/variants please choose a valid one.$(tput sgr0)"
@@ -1199,7 +1199,7 @@ prepare_variant_for_compiling()
         sed -i -- "s/^#define LANG_MODE *0/#define LANG_MODE              1/g" $SCRIPT_PATH/Firmware/config.h
         echo " "
     fi
-        
+
     #Check if compiler flags are set to Prusa specific needs for the rambo board.
     #if [ $TARGET_OS == "windows" ]; then
        #RAMBO_PLATFORM_FILE="PrusaResearchRambo/avr/platform.txt"
@@ -1412,6 +1412,7 @@ save_en_firmware()
 #### Start: Cleanup Firmware
 cleanup_firmware()
 {
+  
     if [[ -z "$prusa_flag" || "$prusa_flag" == "0" ]]; then
         rm $SCRIPT_PATH/Firmware/Configuration_prusa.h || failures 13
     fi
@@ -1438,7 +1439,7 @@ cleanup_firmware()
     if [ "$new_build_flag" == "1" ]; then
         rm -r -f $BUILD_PATH/* || failures 13
     fi
-
+ 
     # Restore files to previous state
     sed -i -- "s/^#define FW_DEV_VERSION FW_VERSION_$DEV_STATUS/#define FW_DEV_VERSION FW_VERSION_UNKNOWN/g" $SCRIPT_PATH/Firmware/Configuration.h
     sed -i -- 's/^#define FW_REPOSITORY "Prusa3d"/#define FW_REPOSITORY "Unknown"/g' $SCRIPT_PATH/Firmware/Configuration.h
@@ -1480,7 +1481,7 @@ cleanup_firmware()
 sort_hexfile()
 {
 # Sort hexfiles only when build ALL is selected
-if [ ! -z "$ALL_VARIANTS" ]; then
+if [ ! -z $ALL_VARIANTS ]; then
 	if [ "$ALL_VARIANTS" == "All" ]; then
 		$SCRIPT_PATH/sort.sh $SCRIPT_PATH/../$OUTPUT_PATH $SCRIPT_PATH/../$OUTPUT_PATH-sorted/
 	else
@@ -1489,6 +1490,7 @@ if [ ! -z "$ALL_VARIANTS" ]; then
 		exit 37
 	fi
 fi
+exit
 }
 
 #### Start: Finish script
@@ -1653,10 +1655,15 @@ set_paths
 check_branch_changed
 
 VariantCount=1
+TotalCount=($(wc -w <<< $VARIANTS))
+if [ $TotalCount == 0 ]; then
+    TotalCount=1
+fi
+
 for v in ${VARIANTS[*]}
 do
     echo
-    echo "Variant count: " $VariantCount 
+    echo "Variant count: " $VariantCount " / " $TotalCount
     ((VariantCount=VariantCount+1))
     check_script_failed_nr1
     check_script_failed_nr2
@@ -1675,6 +1682,7 @@ do
     cleanup_firmware
     sort_hexfile
 done
+sort_hexfile
 finish_pf-build
 if [ $TARGET_OS == "linux" ]; then
     MK404_SIM

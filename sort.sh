@@ -269,22 +269,18 @@ echo '   ... done'
 # delete empty subdirectories
 find $Destination_Path -type d -empty -delete
 
-
-
 # =========================================================================================================
 # create zip-file for configuration
 echo
 echo '   creating zip file of sorted hex-files ....'
+echo
 if [ $TARGET_OS == "windows" ]; then
     zip a $Destination_Path.zip  $Destination_Path/* | tail -4
 else
  	ZIPNAMETMP=${Destination_Path%*/}
-	ZIPNAME=${ZIPNAMETMP##*/}
-	echo 'zipname'
-	echo $ZIPNAME
-	
+	ZIPNAME=${ZIPNAMETMP##*/}	
 	pushd $Destination_Path
-	zip -r ../$Destination_Path/$ZIPNAME.zip  * | tail -4
+	zip -r $Destination_Path/$ZIPNAME.zip  * | tail -4
 	popd
 fi
 echo
