@@ -1484,6 +1484,9 @@ sort_hexfile()
 # Sort hexfiles only when build ALL is selected
 if [ ! -z $ALL_VARIANTS ]; then
 	if [ "$ALL_VARIANTS" == "All" ]; then
+        echo
+        echo 'sorting .hex files'
+        echo
 		$SCRIPT_PATH/sort.sh $SCRIPT_PATH/../$OUTPUT_PATH $SCRIPT_PATH/../$OUTPUT_PATH-sorted/
 	else
 		echo "$(tput setaf 1)ALL_VARIANTS argument is wrong!$(tput sgr0)"
@@ -1491,7 +1494,6 @@ if [ ! -z $ALL_VARIANTS ]; then
 		exit 37
 	fi
 fi
-exit
 }
 
 #### Start: Finish script
@@ -1681,7 +1683,6 @@ do
         save_en_firmware
     fi
     cleanup_firmware
-    sort_hexfile
 done
 sort_hexfile
 finish_pf-build
