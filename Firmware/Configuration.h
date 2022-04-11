@@ -27,7 +27,7 @@ extern PGM_P sPrinterName;
     #define FW_VERSION STR(FW_MAJOR) "." STR(FW_MINOR) "." STR(FW_REVISION) "-" STR(FW_FLAVOR) "" STR(FW_FLAVERSION)
 #endif
 
-#define FW_COMMIT_NR 5783
+#define FW_COMMIT_NR 5784
 #define FW_COMMIT_HASH "cd1395de"
 
 // FW_VERSION_UNKNOWN means this is an unofficial build.

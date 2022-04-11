@@ -21,6 +21,7 @@
 # 11 Jul 2021, wschadow, added LGX, added folders for Prusa and Caribou extruders
 # 18 Jul 2021, wschadow, a zip file of the sorted files is generated
 # 14 Feb 2020, wschadow, added LGXM and LGXMM, only sort and zip .elf files
+# 11 Apr 2022, wschadow, updated output path and name of combined zip file
 #
 # Folder tree:
 #.
@@ -272,10 +273,10 @@ find $Destination_Path -type d -empty -delete
 # =========================================================================================================
 # create zip-file for configuration
 echo
-echo '   creating zip file of sorted hex-files ....'
+echo 'creating zip file of sorted hex-files ....'
 echo
 if [ $TARGET_OS == "windows" ]; then
-    zip a $Destination_Path.zip  $Destination_Path/* | tail -4
+    zip a $Destination_Path/$ZIPNAME.zip  $Destination_Path/* | tail -4
 else
  	ZIPNAMETMP=${Destination_Path%*/}
 	ZIPNAME=${ZIPNAMETMP##*/}	
