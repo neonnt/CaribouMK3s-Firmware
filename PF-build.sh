@@ -575,7 +575,7 @@ BOARD_URL="https://raw.githubusercontent.com/caribou3d/Arduino_Boards/master/IDE
 BOARD_FILENAME="caribou3dboards"
 #BOARD_FILE_URL="https://raw.githubusercontent.com/3d-gussner/Arduino_Boards/Prusa_Merge_v1.0.3/IDE_Board_Manager/prusa3dboards-1.0.3.tar.bz2"
 BOARD_FILE_URL="https://raw.githubusercontent.com/caribou3d/Arduino_Boards/master/IDE_Board_Manager/caribou3dboards-1.0.0.tar.bz2"
-#PF_BUILD_FILE_URL="https://github.com/3d-gussner/PF-build-env-1/releases/download/$BUILD_ENV-WinLin/PF-build-env-WinLin-$BUILD_ENV.zip"
+PF_BUILD_FILE_URL="https://github.com/3d-gussner/PF-build-env-1/releases/download/$BUILD_ENV-WinLin/PF-build-env-WinLin-$BUILD_ENV.zip"
 if [[ "$BOARD_VERSION" == "1.0.3" || "$BOARD_VERSION" == "1.0.2" || "$BOARD_VERSION" == "1.0.1" ]]; then
     PF_BUILD_FILE_URL="https://github.com/prusa3d/PF-build-env/releases/download/$BUILD_ENV-WinLin/PF-build-env-WinLin-$BUILD_ENV.zip"
 fi
@@ -772,7 +772,7 @@ if [[ ! -d "../PF-build-env-$BUILD_ENV/$ARDUINO_ENV-$BOARD_VERSION-$TARGET_OS-$P
 fi    
 
 # Download and extract Prusa Firmware specific library files
-if [[ "$BOARD_VERSION" == "1.0.3" || "$BOARD_VERSION" == "1.0.2" || "$BOARD_VERSION" == "1.0.1" ]]; then
+if [[ "$BOARD_VERSION" == "1.0.3" || "$BOARD_VERSION" == "1.0.2" || "$BOARD_VERSION" == "1.0.1" || "$BOARD_VERSION" == "1.0.0"  ]]; then
     if [ ! -f "PF-build-env-WinLin-$BUILD_ENV.zip" ]; then
         echo "$(tput setaf 6)Downloading Prusa Firmware build environment...$(tput setaf 2)"
         if [ $OUTPUT == "1" ] ; then
