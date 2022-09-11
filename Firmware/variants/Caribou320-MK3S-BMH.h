@@ -605,13 +605,14 @@
 // 247 is Pt100 with 4k7 pullup and PT100 Amplifier
 // 110 is Pt100 with 1k pullup (non standard)
 // 800 Slice Engineering 450c thermistors
+// 66 DyzeDesign 500c thermistors
 
 #if defined(E3D_PT100_EXTRUDER_WITH_AMP)
 #define TEMP_SENSOR_0 247
 #elif defined(E3D_PT100_EXTRUDER_NO_AMP)
 #define TEMP_SENSOR_0 148
 #elif defined(SLICE_HT_EXTRUDER)
-#define TEMP_SENSOR_0 800
+#define TEMP_SENSOR_0 66
 #else
 #define TEMP_SENSOR_0 5
 #endif
